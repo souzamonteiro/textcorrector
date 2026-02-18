@@ -1,0 +1,15 @@
+uma nesta aula resolveremos alguns problemas propostos. O primeiro problema consiste em criar um programa que solicite valores ao usuário. Esses valores serão armazenados em duas variáveis. Em seguida, deve ser determinado o menor deles e exibidos os dois valores na tela em ordem crescente. Tente resolver o problema.
+
+Em seguida, retorne à exibição. Aqui está a resolução. No primeiro problema, nós criamos duas variáveis, a e b. Essas duas variáveis estão disponíveis aqui na paleta de variáveis. Também criamos uma variável de saída para apresentação dos resultados. As variáveis a e b recebem os valores digitados pelo usuário, ou seja, o primeiro e o segundo valor. Utilizando os blocos "Sete Pilotos", configuramos o número porque vamos ter que fazer comparações numéricas. Utilizou um bloco cinza onde foi adicionada a cláusula "se". Se a variável a for maior que b, então é exibida a informação da redução dos valores em ordem crescente, colocando a primeira seguida pelo valor de b. Observe que para isso foi criada uma variável de saída, e essa variável de saída vai ser configurada com os dados das duas variáveis. Utilizando um bloco "Criar Texto", concatenamos expressamente os valores de ordem crescente, ou seja, o valor da variável a e a expressão "e" o valor da variável b, e o ponto final.
+
+No caso em que a é menor que b, será executado o bloco "senão". A variável de saída será definida para o valor de b, seguido do valor de a. Utilizando o bloco "Criar Texto", colocamos apenas as variáveis a e b, com o texto "a = " e "b = ".
+
+Para apresentar os resultados, precisamos de um bloco para mostrar os resultados. Voltemos a apresentar o resultado. Para que a saída seja exibida, basta clicar no botão e o arquivo será baixado. Renomeie o nome que desejar.
+
+O segundo problema consiste em criar uma função que receba um número inteiro em seguida calcule seu fatorial. O valor do fatorial deve ser exibido na tela. É importante lembrar que o fatorial de n é calculado da seguinte forma: n! = n * (n-1) * (n-2) * ... * 1.
+
+Como exemplo, temos o fatorial de 5: 5! = 5 * 4 * 3 * 2 * 1 = 120.
+
+Para exibir os resultados, utilizamos o bloco "função" na aba "Obtenção". Obtemos o bloco "função fatorial" e renomeamos para "fatorial". Dentro do bloco "função", adicionamos um bloco cinza para fazer a comparação "se". Se o valor de n for maior que 0, então o resultado é definido como n * fatorial(n-1). Caso contrário, o resultado é definido para 1.
+
+Utilizamos recursão para calcular o fatorial.  A função fatorial é chamada a si mesma para calcular o fatorial de números menores até 1.

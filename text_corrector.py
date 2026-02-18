@@ -6,7 +6,9 @@ import sys
 def correct_text_with_ollama(text, model):
     """Correct text using Ollama"""
     prompt = (
-        "The following text came from an audio transcription. Can you correct it?\n\n"
+        "The following text came from an audio transcription. Can you correct it? "
+        "Return ONLY the corrected text, without any additional comments, explanations, "
+        "or formatting. Return only the clean corrected text.\n\n"
         f"Text: {text}"
     )
 
@@ -22,6 +24,7 @@ def correct_text_with_ollama(text, model):
         )
         
         if result.returncode == 0:
+            # Return only the corrected text, stripped of extra whitespace
             return result.stdout.strip()
         else:
             print(f"Ollama error: {result.stderr}")
@@ -68,7 +71,7 @@ def process_files(input_dir, output_dir, model):
         corrected_text = correct_text_with_ollama(content, model)
         
         if corrected_text:
-            # Save result
+            # Save result - ONLY the corrected text
             try:
                 with open(output_path, 'w', encoding='utf-8') as f:
                     f.write(corrected_text)
