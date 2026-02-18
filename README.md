@@ -87,7 +87,7 @@ textcorrector/
 
 ## License
 
-MIT License - Feel free to modify and distribute
+Apache-2.0 license - Feel free to modify and distribute
 
 ## Contributing
 
