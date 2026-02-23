@@ -1,0 +1,40 @@
+Thinking...
+Okay, the user wants me to rewrite the provided text to make it coherent, properly formatted, and correct in terms of language and theme. Let me start by reading through the original text carefully to understand the content.
+
+The text seems to be a transcription of a lesson on programming, specifically solving two problems: one involving finding the minimum of two numbers and displaying them in ascending order, and another about calculating a factorial using recursion. However, the original text is a bit messy with some typos, incorrect terms, and possibly some non-English words like <UNK>. 
+
+First, I need to identify the main points of each problem. The first problem is about creating a program that takes two numbers, determines the smaller one, and displays them in ascending order. The second problem is about writing a function to calculate the factorial of an integer using recursion. 
+
+Looking at the original text, there are several issues. For example, "valorizam usuário" should be "valores do usuário". Also, there are mentions of "bloco sete pilotos" which might be a mistranslation or incorrect term. The user might be referring to blocks in a programming environment like Scratch, where blocks are used for coding. So "bloco sete pilotos" could be a mistranslation of "seven pilot blocks" or something similar, but I need to check the context. 
+
+Another part mentions "cláusula cena" which might be "cláusula senão" (else clause). There are also references to "variável saída" which should be "variável de saída" (output variable). 
+
+In the second problem, the explanation of factorial calculation is a bit confusing. The original text mentions "fatorial de momento" which might be "fatorial de um número" (factorial of a number). Also, the term "recursão" is used, which is correct for recursion. 
+
+I need to correct these grammatical errors, ensure the terms are accurate, and structure the text properly. The user wants the rewritten text to be coherent, so I should organize the information logically, separating the two problems clearly. 
+
+I should also check for any technical inaccuracies. For example, in the first problem, the code should compare the two numbers and display them in order. The second problem involves a recursive function, which is correctly mentioned. 
+
+Another thing to note is the mention of "bloco criar três tuca" which might be a mistranslation. It could be "bloco criar texto" (text creation block) or similar. 
+
+I need to make sure that the rewritten text is in Portuguese, as the original is, and that it's formatted correctly, perhaps using bullet points or sections for each problem. Also, the user wants only the rewritten text, no additional comments. 
+
+Let me start by breaking down each problem, correct the language, and present the information in a clear, structured manner. I'll ensure that the technical terms are accurate and that the explanations are coherent. 
+
+For the first problem, I'll describe the steps of taking input, storing in variables, comparing, and displaying in order. For the second problem, I'll explain the factorial calculation using recursion, ensuring the terms like "recursão" and "função" are correctly used. 
+
+I'll also check for any remaining typos or unclear phrases and replace them with the correct terms. Once done, I'll review the entire text to ensure it's coherent, properly formatted, and free of errors.
+...done thinking.
+
+A aula seguinte aborda a resolução de dois problemas propostos. O primeiro problema consiste em criar um programa que solicite dois valores ao usuário, armazene-os em duas variáveis e exiba-os em ordem crescente. O segundo problema envolve a criação de uma função que calcule o fatorial de um número inteiro.  
+
+**Primeiro problema**  
+O programa deve solicitar dois valores ao usuário, armazená-los em variáveis `a` e `b`, comparar os valores e exibir os resultados em ordem crescente. Para isso, foi utilizada uma lógica condicional que verifica qual dos valores é menor. Caso `a` seja menor que `b`, o resultado é exibido como `a` seguido de `b`. Caso contrário, o resultado é `b` seguido de `a`. A saída foi formatada concatenando os valores das variáveis com um ponto final.  
+
+**Segundo problema**  
+A função calcula o fatorial de um número inteiro. O fatorial de um número `n` é definido como o produto de todos os números inteiros positivos de `1` até `n`. Por exemplo, o fatorial de `5` é `5 × 4 × 3 × 2 × 1 = 120`. A implementação utiliza a **recursão**, ou seja, a função chama a si mesma com um valor decrementado até chegar ao caso base (`n = 1` ou `n = 0`). O resultado é acumulado em uma variável e retornado ao final.  
+
+**Exemplo de execução**  
+Para o primeiro problema, ao digitar os valores `3` e `4`, o programa exibe: "Valores em ordem crescente: 3 4". Para o segundo problema, ao calcular o fatorial de `5`, o resultado é `120`.  
+
+A resolução detalhada inclui a criação de variáveis, blocos de comparação e a estrutura da função recursiva, garantindo que o código seja claro e funcional.

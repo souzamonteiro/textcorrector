@@ -1,0 +1,19 @@
+Olá, eu sou Roberto Monteiro e este é o curso Fundamentos de Programação.
+
+O que estudar programação?
+Os computadores estão em toda parte nos nossos desktops, tablets, smartphones, smartwatches, e até assistentes pessoais, como por exemplo, o assistente pessoa Alexa da Amazon e o assistente pessoal da Apple, a Siri. Além disso, os programas de computador controlam estes equipamentos, os computadores. Então, uma pessoa que conhece programação, ela tem um diferencial em relação aos outros profissionais que atuam no mercado, e o que ela será capaz de controlar estes equipamentos, que estão praticamente em todos os momentos de nossas vidas.
+
+E o que aprendemos neste curso?
+Nós conheceremos os fundamentos da lógica de programação, na primeira parte do curso, onde nós aprenderemos a programar utilizando blocos de programação, e a partir desses blocos e a construção de algoritmos, nós conheceremos as estruturas básicas de sete linguagens de programação: a linguagem Dart foi criada pelo Google, o Javascript criada pela Netscape, que é a linguagem de programação mais utilizada no mundo atualmente, a linguagem Lua criada no Brasil, MaiaScript, uma linguagem que eu criei para o desenvolvimento de aplicações científicas, e que é utilizada por alguns dos nossos alunos do mestrado e doutorado, a linguagem PHP que é uma linguagem para a construção de aplicações web, extremamente utilizada, a linguagem Portugal, uma versão de uma linguagem de programação em língua portuguesa, usada apenas para aprendizagem de lógica de programação, e a linguagem Python, que também é uma das linguagens mais utilizadas no mundo. Nós aprenderemos os fundamentos dessas linguagens. Não é um curso completo em de cada uma das linguagens de programação, mas nos permitirá seguir adiante, caso você deseje continuar seus estudos de programação.
+Na segunda parte do nosso curso, nós aprenderemos os fundamentos de programação em C++, e na última parte, a programação orientada a objetos.
+
+Quais são os nossos objetivos?
+Os nossos objetivos são conhecer os princípios da lógica computacional, compreender o que são variáveis e operadores, entender as estruturas de decisão e repetição mais comuns em programação de computadores, utilizar funções e procedimentos, implementar algoritmos a partir de blocos de programação simples. conhecer os fundamentos da linguagem de programação C++, compreender o paradigma de programação objeto orientado, e construir programas de computadores em C++.
+
+E como nós faremos isso?
+Na primeira parte, nós utilizaremos o ambiente de programação online LearningBlockly, uma ferramenta que eu desenvolvi com meus alunos, especificamente para ensinar programação de computadores. Nós já a utilizamos há vários anos tanto no SENAI, como em outras instituições de ensino públicas, como a UNEB, por exemplo, e também na segunda parte e na terceira parte do curso, os utilizaremos um dos ambientes de programação mais utilizados para a aprendizagem de programação, em C e C++, a IDE Dev-C++.
+
+Como será a nossa avaliação?
+Nós entregaremos autoavaliação a partir da solução dos exercícios propostos. Porém, ao final do curso, haverá uma avaliação especial. Esta avaliação será utilizada para lhe dar nota na disciplina.
+
+Bons estudos!

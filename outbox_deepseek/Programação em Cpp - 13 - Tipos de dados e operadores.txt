@@ -1,0 +1,178 @@
+Nesta aula, vamos estudar os tipos de dados e operadores em C++. Na aula anterior, vimos os elementos básicos da estrutura de um programa em C++ e construímos nosso primeiro programa. Agora, daremos continuidade ao aprendizado explorando como armazenar e manipular informações.
+
+Assim como no VisuAlg, onde utilizamos variáveis para armazenar dados que serão usados posteriormente, em C++ também usamos variáveis. No entanto, C++ é uma linguagem fortemente tipada, o que significa que toda variável precisa ter um tipo de dado definido no momento de sua criação. Isso é diferente de linguagens de programação mais flexíveis quanto à tipagem.
+
+Em C++, temos alguns tipos básicos de dados. Os principais são:
+- `int`: utilizado para armazenar números inteiros.
+- `float` e `double`: utilizados para armazenar números com ponto flutuante, ou seja, números fracionários. A diferença entre eles é a precisão: `float` tem precisão menor (ocupa 4 bytes) e `double` tem precisão maior (ocupa 8 bytes).
+- `char`: utilizado para armazenar um único caractere.
+- `string`: utilizado para armazenar uma cadeia de caracteres, ou seja, um texto.
+
+Além desses, existem tipos mais avançados, como os ponteiros, que exploraremos mais adiante no curso.
+
+Vamos começar declarando algumas variáveis. Em C++, a declaração segue o formato: `tipo nome_da_variavel;`. Por exemplo:
+
+```cpp
+int idade;
+float altura;
+char letra;
+char nome[256];  // Isso cria uma string com capacidade para até 255 caracteres
+```
+
+No caso de uma string, precisamos definir um tamanho máximo. No exemplo acima, `nome` pode armazenar até 255 caracteres (mais o caractere nulo de término).
+
+Para atribuir valores a essas variáveis, usamos o operador de atribuição `=`. Por exemplo:
+
+```cpp
+idade = 25;
+altura = 1.75;
+letra = 'A';
+nome = "Roberto";
+```
+
+Observação importante: quando atribuímos um único caractere a uma variável do tipo `char`, usamos aspas simples (`'A'`). Para atribuir uma sequência de caracteres (uma string), usamos aspas duplas (`"Roberto"`).
+
+Agora, vamos exibir esses valores na tela. Como vimos na aula anterior, usamos o comando `cout`. Para exibir o valor de uma variável, fazemos:
+
+```cpp
+cout << idade;
+```
+
+Se quisermos exibir um texto junto com o valor, podemos combinar:
+
+```cpp
+cout << "A idade é: " << idade;
+```
+
+Isso escreverá na tela: `A idade é: 25`.
+
+Podemos também declarar e atribuir valores na mesma linha:
+
+```cpp
+int x = 10;
+```
+
+Vamos construir um programa mais interativo, que receba dados fornecidos pelo usuário. Para isso, usaremos o comando de entrada `cin`. O `cin` (pronuncia-se "cê-in") lê dados do teclado. A sintaxe é o inverso do `cout`: usamos o operador `>>` para direcionar a entrada para uma variável.
+
+Exemplo:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int idade;
+    cout << "Informe sua idade: ";
+    cin >> idade;
+    cout << "Você tem " << idade << " anos de idade.";
+    return 0;
+}
+```
+
+Ao executar esse programa, o computador mostrará a mensagem "Informe sua idade: " e aguardará que o usuário digite um número e pressione Enter. Em seguida, exibirá "Você tem [idade] anos de idade.".
+
+Podemos fazer o mesmo com variáveis de outros tipos. Vamos solicitar também a altura do usuário, usando `float`:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int idade;
+    float altura;
+    
+    cout << "Informe sua idade: ";
+    cin >> idade;
+    cout << "Informe sua altura em metros: ";
+    cin >> altura;
+    
+    cout << "Você tem " << idade << " anos e " << altura << " metros de altura.";
+    return 0;
+}
+```
+
+É importante notar que, ao digitar números fracionários, devemos usar o ponto como separador decimal (por exemplo, 1.75).
+
+Agora, vamos incluir uma string para o nome do usuário:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int idade;
+    float altura;
+    char nome[256];
+    
+    cout << "Informe seu nome: ";
+    cin >> nome;
+    cout << "Informe sua idade: ";
+    cin >> idade;
+    cout << "Informe sua altura em metros: ";
+    cin >> altura;
+    
+    cout << "Olá, " << nome << ". Você tem " << idade << " anos e " << altura << " metros de altura.";
+    return 0;
+}
+```
+
+Observe que, ao usar `cin` com uma string declarada como `char nome[256]`, a leitura será feita até o primeiro espaço em branco. Se o nome completo tiver espaços, precisaremos de uma abordagem diferente, mas por enquanto isso será suficiente.
+
+Agora que já sabemos como armazenar e exibir dados, vamos estudar os operadores. A maioria dos operadores em C++ é herdada da linguagem C, e são muito parecidos com os de outras linguagens, já que muitas linguagens modernas se basearam no C.
+
+Vamos declarar duas variáveis inteiras, `a` e `b`, e atribuir valores a elas:
+
+```cpp
+int a = 10;
+int b = 3;
+```
+
+Agora, podemos realizar operações aritméticas:
+
+- Soma: `a + b` resulta em `13`.
+- Subtração: `a - b` resulta em `7`.
+- Multiplicação: `a * b` resulta em `30`.
+- Divisão: `a / b` resulta em `3` (porque é divisão entre inteiros; o resultado é truncado).
+- Resto da divisão (módulo): `a % b` resulta em `1`, porque 10 dividido por 3 tem resto 1.
+
+O operador de módulo é representado pelo caractere `%`.
+
+Além dos operadores aritméticos, temos os operadores relacionais, que comparam valores e retornam verdadeiro (`true`) ou falso (`false`). Em C++, `true` é representado por qualquer valor diferente de zero, e `false` é representado por zero.
+
+- `a == b` : verifica se `a` é igual a `b` (usamos dois sinais de igual para comparação).
+- `a != b` : verifica se `a` é diferente de `b`.
+- `a > b`  : verifica se `a` é maior que `b`.
+- `a < b`  : verifica se `a` é menor que `b`.
+- `a >= b` : verifica se `a` é maior ou igual a `b`.
+- `a <= b` : verifica se `a` é menor ou igual a `b`.
+
+No nosso exemplo, com `a = 10` e `b = 3`, temos:
+- `a == b` é falso (0).
+- `a != b` é verdadeiro (1).
+- `a > b` é verdadeiro (1).
+- `a < b` é falso (0).
+
+Temos também os operadores lógicos, que combinam expressões booleanas:
+- `&&` (e lógico): retorna verdadeiro se ambas as expressões forem verdadeiras.
+- `||` (ou lógico): retorna verdadeiro se pelo menos uma das expressões for verdadeira.
+- `!` (não lógico): inverte o valor lógico da expressão.
+
+Por exemplo, se tivermos `(a > 5) && (b < 5)`, isso seria verdadeiro, pois ambas as condições são verdadeiras (10 > 5 é verdadeiro, 3 < 5 é verdadeiro).
+
+Por fim, existem operadores muito úteis chamados operadores de incremento e decremento:
+- `a++` ou `++a`: incrementa o valor de `a` em 1.
+- `a--` ou `--a`: decrementa o valor de `a` em 1.
+
+A diferença entre a forma prefixada (`++a`) e pós-fixada (`a++`) está no momento em que o incremento é realizado, mas para nossos primeiros programas, usaremos principalmente a forma isolada.
+
+Exemplo:
+
+```cpp
+int contador = 0;
+contador++;  // Agora contador vale 1
+contador++;  // Agora contador vale 2
+```
+
+Esses são os operadores mais comuns e que utilizaremos ao longo da disciplina. A linguagem C++ possui muitos outros operadores, mas com esses já podemos construir programas interessantes.
+
+Na próxima aula, continuaremos explorando esses conceitos e criaremos programas mais elaborados. Até lá!

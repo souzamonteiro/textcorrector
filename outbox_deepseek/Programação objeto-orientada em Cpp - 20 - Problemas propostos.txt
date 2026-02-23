@@ -1,0 +1,127 @@
+Nesta aula, vamos resolver um problema proposto para praticar os conceitos de orientação a objetos em C++. O problema consiste em criar classes que representem diferentes tipos de dinossauros: brontossauros e tiranossauros. Para isso, criaremos uma classe base `Dinossauro` e, a partir dela, derivaremos as classes específicas.
+
+Vamos criar um novo arquivo chamado "dinossauros.cpp" e desenvolver nossa solução passo a passo.
+
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Classe base (primitiva)
+class Dinossauro {
+private:
+    string nome;
+    
+public:
+    // Construtor que recebe o nome do dinossauro
+    Dinossauro(string n) {
+        nome = n;
+    }
+    
+    // Método getter para acessar o nome (encapsulamento)
+    string getNome() {
+        return nome;
+    }
+    
+    // Método setter para modificar o nome (com validação, se necessário)
+    void setNome(string n) {
+        nome = n;
+    }
+    
+    // Método virtual para ser sobrescrito nas classes derivadas
+    virtual void comer(string alimento) {
+        cout << nome << " está comendo " << alimento << "." << endl;
+    }
+};
+
+// Classe derivada: Brontossauro
+class Brontossauro : public Dinossauro {
+public:
+    // Construtor do Brontossauro chama o construtor da classe base
+    Brontossauro(string n) : Dinossauro(n) {}
+    
+    // Sobrescrita do método comer (comportamento específico)
+    void comer(string alimento) override {
+        cout << getNome() << " (brontossauro) está comendo folhas: " << alimento << "." << endl;
+    }
+};
+
+// Classe derivada: Tiranossauro
+class Tiranossauro : public Dinossauro {
+public:
+    // Construtor do Tiranossauro chama o construtor da classe base
+    Tiranossauro(string n) : Dinossauro(n) {}
+    
+    // Sobrescrita do método comer (comportamento específico)
+    void comer(string alimento) override {
+        cout << getNome() << " (tiranossauro) está devorando carne: " << alimento << "." << endl;
+    }
+};
+
+int main() {
+    // Criando objetos das classes derivadas
+    Brontossauro bronto("Bronto");
+    Tiranossauro tiran("Tiran");
+    
+    // Exibindo os nomes (usando o getter herdado)
+    cout << "Dinossauro 1: " << bronto.getNome() << endl;
+    cout << "Dinossauro 2: " << tiran.getNome() << endl;
+    
+    // Chamando o método comer (comportamento polimórfico)
+    bronto.comer("samambaias");
+    tiran.comer("um herbívoro");
+    
+    // Demonstração de polimorfismo com ponteiros
+    Dinossauro* ptr;
+    ptr = &bronto;
+    ptr->comer("plantas aquáticas");
+    
+    ptr = &tiran;
+    ptr->comer("um brontossauro");
+    
+    return 0;
+}
+```
+
+## Explicação da solução
+
+### 1. Classe base `Dinossauro`
+- Criamos a classe `Dinossauro` com um atributo privado `nome` (string).
+- Implementamos um construtor que recebe o nome e o armazena.
+- Criamos métodos getter (`getNome`) e setter (`setNome`) para acessar e modificar o atributo de forma controlada (encapsulamento).
+- Definimos um método virtual `comer` que será sobrescrito nas classes derivadas.
+
+### 2. Classes derivadas `Brontossauro` e `Tiranossauro`
+- Ambas as classes herdam publicamente de `Dinossauro`.
+- Seus construtores chamam o construtor da classe base usando a sintaxe `: Dinossauro(n)`. Isso garante que o nome seja passado para a classe base.
+- Sobrescrevemos o método `comer` com comportamentos específicos para cada tipo de dinossauro. Usamos `override` para indicar explicitamente que estamos sobrescrevendo um método virtual.
+
+### 3. Função `main`
+- Criamos um objeto `Brontossauro` chamado "Bronto" e um `Tiranossauro` chamado "Tiran".
+- Exibimos seus nomes usando o getter herdado.
+- Chamamos o método `comer` para cada objeto, observando comportamentos diferentes.
+- Demonstramos polimorfismo usando um ponteiro para a classe base. O ponteiro `ptr` pode apontar para qualquer objeto derivado, e a chamada ao método virtual `comer` executa a versão correta (do brontossauro ou do tiranossauro) dependendo do objeto apontado.
+
+## Conceitos aplicados
+
+1. **Herança**: As classes `Brontossauro` e `Tiranossauro` derivam de `Dinossauro`, herdando seus atributos e métodos.
+2. **Encapsulamento**: O atributo `nome` é privado e só pode ser acessado via getters/setters.
+3. **Construtores e inicialização da classe base**: As classes derivadas chamam explicitamente o construtor da classe base.
+4. **Métodos virtuais e polimorfismo**: O método `comer` é virtual na classe base e sobrescrito nas derivadas, permitindo comportamento específico através de ponteiros da classe base.
+5. **Sobrescrita de métodos**: Usamos a palavra-chave `override` para garantir que estamos sobrescrevendo corretamente.
+
+## Observação importante sobre construtores
+
+Quando uma classe derivada é criada, o construtor da classe base é sempre chamado. Se a classe base não tiver um construtor padrão (sem parâmetros), a classe derivada deve chamar explicitamente o construtor apropriado da classe base. Fizemos isso com a sintaxe `: Dinossauro(n)`.
+
+## Próximos passos
+
+Esta solução serve como base para problemas mais complexos. Podemos expandir este exemplo adicionando:
+- Mais atributos (como peso, altura, período histórico)
+- Mais métodos (dormir, rugir, etc.)
+- Composição (por exemplo, um dinossauro pode ter uma lista de alimentos preferidos)
+- Tratamento de exceções para validação de dados
+
+Na prática, esses conceitos serão aplicados no desenvolvimento do nosso projeto principal: um motor de diálogo para jogos, onde personagens (como esses dinossauros) poderão interagir entre si de forma automática.
+
+Vamos continuar praticando com exercícios e, em seguida, iniciaremos a modelagem das classes do nosso jogo. Até a próxima aula!

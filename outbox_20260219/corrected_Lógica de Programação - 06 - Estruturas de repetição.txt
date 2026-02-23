@@ -1,0 +1,13 @@
+olá nesta aula aprenderemos sobre estruturas de repetição. Estruturas de repetição são recursos que permitem repetir a execução de porções de código enquanto uma condição for avaliada como verdadeira ou até que uma condição seja avaliada como verdadeira. Para tanto, utilizaremos os blocos “repetir enquanto” contar. Veja como utilizar o bloco “repetir enquanto” para criar um laço.
+
+Para utilizar o bloco “repetir enquanto”, utilizaremos uma variável. Vamos criar a variável “n” e esta variável “n” será utilizada para passar um valor inicial para ela, este caso zero. Vamos colocar uma condição: “se n é menor ou igual a cinco”. Para facilitar o entendimento, escrevemos: “repetir enquanto n menor ou igual a cinco”.  Dentro do bloco, alteraremos o valor de “n” para que ele se torne maior. Assim, “repetir enquanto n menor ou igual a cinco” é avaliado como verdadeiro enquanto a variável “n” contiver um valor menor que cinco.
+
+Para que isso aconteça, é necessário que o valor de “n” se modifique durante a execução, porque o laço se repete a cada vez que o valor de “n” altera. Vamos colocar um bloco “definir n” para o valor matemático de “n = n + 1”. Assim, a cada execução, o valor de "n" aumenta de um. Vamos exibir o valor determinado.  Para que ele exiba o valor na tela, podemos colocar um bloco “imprimir n”.
+
+Veja como funciona a execução: a primeira vez, o valor de “n” é zero. Então, incrementamos o valor de “n” em um. Chamamos “imprimir n” para exibir na tela o valor de “n” (que é zero).  Nesse caso, ele vai voltar para o início do laço, pois a condição “n menor ou igual a cinco” ainda é verdadeira (zero é menor ou igual a cinco).  Então, ele se repete, o valor de "n" aumenta e o bloco “imprimir n” é executado novamente. Repete-se até que “n” se torne maior que cinco. Quando ele se torna maior que cinco, a condição é falsa e o laço termina.
+
+Para repetir até que a condição seja verdadeira, devemos utilizar a condição “se n menor ou igual a cinco”. Para repetir até que a condição seja falsa, utilizamos a condição “se n maior que cinco”.
+
+Em resumo, para criar um laço, precisamos ter uma variável de iteração, que é a variável que controla o laço.  Este laço conta de um até dez. Para que isso aconteça, precisamos utilizar um bloco de definição da variável.
+
+O laço “repetir enquanto” permite que você execute um bloco de código repetidamente enquanto uma determinada condição for verdadeira. É uma ferramenta essencial para automatizar tarefas e simplificar a programação.

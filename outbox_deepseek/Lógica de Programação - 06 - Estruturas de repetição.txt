@@ -1,0 +1,143 @@
+Olá! Nesta aula, aprenderemos sobre estruturas de repetição. Estruturas de repetição são recursos que permitem repetir a execução de porções de código enquanto uma condição for avaliada como verdadeira, ou até que uma condição seja avaliada como verdadeira. Para tanto, utilizaremos os blocos "repita enquanto", "repita até" e "contar".
+
+Vejamos o bloco "repita enquanto". Para utilização do bloco "repita enquanto", utilizaremos uma variável. Vamos criar a variável "n". Esta variável "n" será utilizada e vamos passar um valor inicial para ela, neste caso, zero. Em seguida, vamos colocar uma condição: uma comparação onde compararemos "n" com o valor 5. A leitura desta declaração ficará da seguinte forma: "repita enquanto n for menor do que 5". Vamos colocar o operador "menor que" para facilitar o entendimento. Então, "repita enquanto n < 5" quer dizer que a porção de código que será colocada aqui dentro do bloco será repetida enquanto a variável "n" contiver um valor menor que 5.
+
+Para que isso aconteça, é necessário que o valor de "n" se modifique durante a execução, porque o laço de repetição realiza iterações. A cada vez que o valor de "n" se alterar, ele estará repetindo uma iteração. Vamos colocar então um bloco "definir n" com um bloco matemático. Vamos pegar o valor inicial de "n" e definir "n" para "n + 1". Ou seja, este bloco vai aumentar o valor de "n" cada vez que ele for executado. Aumentar de quanto? Do valor que ele tiver, mais um. E a cada vez que isso acontecer, vamos exibir o valor de "n" na tela.
+
+Como é que nós vamos fazer isso? Vamos no bloco da seção Texto, pegar o bloco "imprimir" e colocar aqui para que ele exiba o valor da variável "n". Bem, vejamos com a execução. A primeira vez que o bloco "repita enquanto" executa, o valor de "n" é zero. Então, ele incrementa o valor de "n" — esse processo de somar mais um chamamos de incrementar — e exibe na tela. Ou seja, o primeiro valor exibido é 1. Depois, ele volta para o início do laço. Esse mecanismo de iteração: o laço testa novamente a condição. O valor de "n" agora é 1, que é menor que 5, então ele executa novamente: incrementa "n" para 2 e exibe, e assim por diante. Isso se repete até que, quando "n" chegar ao valor 5, ele ainda é válido? A condição é "n < 5". Quando "n" é 5, a condição se torna falsa, então ele não executa mais. O último valor exibido foi 4, porque ele incrementa e depois exibe. Quando "n" era 4, ele entrou, incrementou para 5 e exibiu 5? Não, porque ao entrar com "n = 4", ele incrementa para 5 e exibe 5. Depois volta para o teste: "n < 5" com "n = 5" é falso, então ele para. Então ele exibe 1, 2, 3, 4 e 5. Isso está correto? Vamos testar mentalmente: com "n" inicial 0, ele testa: 0 < 5? Sim. Executa: incrementa (n vira 1), exibe 1. Testa: 1 < 5? Sim. Executa: incrementa (n vira 2), exibe 2. Testa: 2 < 5? Sim. Executa: incrementa (n vira 3), exibe 3. Testa: 3 < 5? Sim. Executa: incrementa (n vira 4), exibe 4. Testa: 4 < 5? Sim. Executa: incrementa (n vira 5), exibe 5. Testa: 5 < 5? Falso. Sai do laço. Então exibe 1, 2, 3, 4, 5. Perfeito.
+
+Se quisermos que ele exiba o valor antes de incrementar, podemos colocar o bloco "imprimir" antes do incremento. Vejamos como fica: mostra o valor inicial (0), depois incrementa, volta, testa, mostra o novo valor (1), e assim por diante. Isso exibiria 0, 1, 2, 3, 4. Quando "n" se tornar 5, ele não entra mais no laço, então não exibe 5.
+
+O laço "repita enquanto" também tem a possibilidade de ser "repita até". A diferença de "repita enquanto" para "repita até" é que o "repita enquanto" repete enquanto a condição for verdadeira. Já o "repita até" repete até que a condição se torne verdadeira, ou seja, ele executa enquanto a condição for falsa. Se executarmos o laço dessa forma com a condição "n <= 5", ele não vai funcionar como esperado porque a condição é verdadeira desde o início. O que a gente quer é que o bloco execute utilizando "repita até" que "n" se torne maior que 5. Então, neste caso, quando ele se tornar maior que 5, ele vai sair do laço. É uma forma de enxergar as iterações bem diferente. No caso do "repita enquanto", ele repete enquanto a condição for verdadeira; na segunda opção, "repita até", ele repete enquanto a condição for falsa, ou seja, até que ela se torne verdadeira.
+
+Existe uma outra forma de executar um laço, mais simplificada, quando a gente tem uma variável que é utilizada como variável de iteração, a variável de controle do laço. Vou deletar todos os blocos e vou criar um laço "contar com". Quando a gente cria um laço "contar com", é criada na seção de variáveis uma variável de iteração. Neste caso, a variável "i", mas você pode selecionar o nome que quiser. Ela só está disponível aqui porque foi criada antes, caso contrário não apareceria. O que o laço "contar com" faz? Ele conta de um até dez. Esse "de" é o valor inicial, e "até" é o valor final. Podemos definir também o incremento. Por exemplo, se colocarmos para incrementar de 2 em 2, ele vai exibir 1, 3, 5, 7, 9. Não mostrou 10 porque, quando ele retorna de 9, mais 2 passaria de 10, então ele para antes de exibir. O bloco "imprimir" dentro do laço exibe a variável "i". Essa é uma forma simplificada de criar um laço de repetição. Fica mais fácil de criar utilizando o laço "contar com" do que os laços "repita enquanto" ou "repita até", porque a variável de iteração já é controlada dentro da própria estrutura do laço. Não é necessário ter um bloco de definição para que isso aconteça.
+
+Vamos ver como é que fica o bloco "contar com" em cada uma das linguagens de programação.
+
+Em Portugol: 
+```
+var i
+para i de 1 ate 10 passo 2 faca
+    escreva(i)
+fimpara
+```
+Aqui, "para" é a estrutura, "i de 1 ate 10 passo 2" significa que i começa em 1, vai até 10, incrementando de 2 em 2, e dentro do bloco temos "escreva(i)".
+
+Em Lua:
+```
+for i = 1, 10, 2 do
+    print(i)
+end
+```
+O "for" em Lua tem a sintaxe: for variável = início, fim, passo do ... end.
+
+Em Dart:
+```
+void main() {
+  for (int i = 1; i <= 10; i += 2) {
+    print(i);
+  }
+}
+```
+Aqui, temos a criação da variável dentro do "for", a condição "i <= 10" e o incremento "i += 2".
+
+Em JavaScript:
+```
+for (let i = 1; i <= 10; i += 2) {
+  console.log(i);
+}
+```
+É muito semelhante ao Dart.
+
+Em MaiaScript:
+```
+for (let i = 1; i <= 10; i += 2) {
+  core.print(i);
+}
+```
+A sintaxe é a mesma do JavaScript.
+
+Em PHP:
+```
+for ($i = 1; $i <= 10; $i += 2) {
+    echo $i;
+}
+```
+A diferença é o cifrão nas variáveis.
+
+Em Python:
+```
+for i in range(1, 11, 2):
+    print(i)
+```
+A função "range" gera uma sequência de 1 até 11 (exclusive), saltando de 2 em 2.
+
+Agora, vejamos o laço "repita enquanto" (ou "while" em inglês) e o "repita até" (que em algumas linguagens é o "do...while"). Vou colocar as mesmas variáveis que usei antes: definir "n" com valor zero. Depois, vamos colocar o bloco "repita enquanto" com a condição "n <= 5". Dentro, vamos exibir o valor de "n" com o bloco "imprimir" e depois incrementar "n" com "n = n + 1". Vejamos como fica o código em cada linguagem.
+
+Em Portugol:
+```
+n = 0
+enquanto (n <= 5) faca
+    escreva(n)
+    n = n + 1
+fimenquanto
+```
+
+Em Dart:
+```
+void main() {
+  int n = 0;
+  while (n <= 5) {
+    print(n);
+    n = n + 1;
+  }
+}
+```
+
+Em JavaScript:
+```
+let n = 0;
+while (n <= 5) {
+  console.log(n);
+  n = n + 1;
+}
+```
+
+Em Lua:
+```
+n = 0
+while (n <= 5) do
+    print(n)
+    n = n + 1
+end
+```
+
+Em MaiaScript:
+```
+let n = 0;
+while (n <= 5) {
+  core.print(n);
+  n = n + 1;
+}
+```
+
+Em PHP:
+```
+$n = 0;
+while ($n <= 5) {
+    echo $n;
+    $n = $n + 1;
+}
+```
+
+Em Python:
+```
+n = 0
+while n <= 5:
+    print(n)
+    n = n + 1
+```
+
+Observe que, se não colocarmos o incremento dentro do laço, ele vai executar para sempre, porque a variável nunca se altera e a condição permanece verdadeira. Por isso, é fundamental que, dentro do laço, haja alguma instrução que modifique a variável testada na condição, para que em algum momento a condição se torne falsa e o laço termine.
+
+Essas são as principais estruturas de repetição que utilizamos em programação.

@@ -1,0 +1,41 @@
+Nesta aula, aprenderemos os princípios fundamentais da programação em C++ e faremos nosso primeiro programa. Vamos estudar a estrutura básica de um programa em C++ e construir o clássico "Hello, world!". O programa "Hello, world!" é tradicionalmente o primeiro programa que todo estudante cria ao aprender uma nova linguagem de programação. Sua função é simplesmente escrever a mensagem "Hello, world!" na tela. Para isso, utilizaremos um comando de saída. Em programação, existem comandos de entrada e comandos de saída. O comando de saída que usaremos será o `cout`.
+
+A linguagem C++ tem uma história interessante. Ela é derivada da linguagem C, que foi criada em 1972 por Dennis Ritchie, nos laboratórios da Bell Telephone, subsidiária da AT&T. A ideia era desenvolver uma nova linguagem de programação que permitisse escrever sistemas operacionais de forma mais eficiente. Na década de 1960, os computadores já possuíam grande capacidade de processamento, mas seus recursos eram subutilizados. Os programas eram carregados e executados de forma sequencial, e durante operações lentas, como a leitura de fitas ou cartões perfurados, o processador ficava ocioso.
+
+Foi nesse contexto que a Bell Labs desenvolveu o sistema operacional Unix. O Unix foi um marco na história da computação por permitir o compartilhamento de recursos do computador entre múltiplos usuários e programas, otimizando o uso do processador. O Unix foi inicialmente escrito em assembly, uma linguagem de baixo nível, extremamente poderosa, mas muito difícil de compreender, aprender e dar manutenção. Cada correção de um defeito no código frequentemente introduzia novos problemas, dada a complexidade do sistema.
+
+Diante dessas dificuldades, Ken Thompson e Dennis Ritchie criaram uma nova linguagem de programação para reescrever o Unix: a linguagem C. A linguagem C teve enorme sucesso e permitiu que o Unix fosse reescrito de forma mais clara e portável. A partir de então, grande parte dos sistemas operacionais passaram a ser escritos em C, e essa influência se estende até os dias de hoje.
+
+Nos anos 1990, Bjarne Stroustrup, também dos laboratórios Bell, buscava criar uma nova versão da linguagem C voltada para processamento distribuído. O processamento distribuído é um modelo no qual partes de um programa rodam em diferentes computadores em uma rede, cooperando entre si para executar uma tarefa completa. Stroustrup acreditava que seria mais fácil construir uma versão distribuída do Unix criando uma extensão da linguagem C que utilizasse o paradigma da orientação a objetos.
+
+A orientação a objetos nos permite pensar em termos de objetos do mundo real, que podem ser manipulados, copiados, destruídos e que reagem a estímulos do ambiente. Isso dá uma nova dimensão à programação, criando novas facilidades, mas também novos desafios. A primeira versão do C++ era, na verdade, um pré-processador para o compilador C. Ele convertia o código C++ em código C, que era então compilado normalmente. Mais tarde, o C++ foi padronizado pela ISO, tornando-se uma linguagem independente.
+
+A principal característica que diferencia o C++ do C é justamente a orientação a objetos. Ao longo do curso, vamos explorar esse paradigma em detalhes. Por enquanto, vamos nos concentrar nos fundamentos.
+
+Todo programa em C++ segue uma estrutura básica. Vamos analisar um exemplo simples:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, world!";
+    return 0;
+}
+```
+
+A primeira linha, `#include <iostream>`, é uma **diretiva de pré-processamento**. Toda diretiva de pré-processamento começa com o caractere `#`, popularmente conhecido como "jogo da velha" ou "sustenido". O pré-processador é uma etapa que ocorre antes da compilação propriamente dita. Ele processa essa diretiva e inclui no seu programa o conteúdo do arquivo `iostream` (Input/Output Stream). Esse arquivo contém as definições necessárias para realizar operações de entrada e saída, como escrever na tela ou ler do teclado.
+
+A segunda linha, `using namespace std;`, declara que estamos utilizando o espaço de nomes `std`. Um espaço de nomes é uma forma de organizar e agrupar elementos do programa, como funções e variáveis, evitando conflitos de nomes. O `std` (abreviação de *standard*) é o espaço de nomes que contém todos os elementos da biblioteca padrão do C++, incluindo o comando `cout`. Sem essa linha, precisaríamos escrever `std::cout` em vez de apenas `cout`, o que tornaria o código um pouco mais verboso.
+
+Em seguida, temos a definição da função `main`. Todo programa em C++ precisa ter uma função `main`. Ela é o ponto de partida da execução do programa. A função `main` é definida com o tipo de retorno `int` (inteiro), o nome `main` e, entre parênteses, podemos colocar parâmetros formais. Por enquanto, deixaremos os parênteses vazios, o que significa que a função não recebe argumentos. As chaves `{ }` delimitam o corpo da função, onde escrevemos as instruções que o programa deve executar.
+
+Dentro do corpo da função, temos a linha `cout << "Hello, world!";`. O comando `cout` (pronuncia-se "cê-out") é o objeto responsável pela saída padrão, que geralmente é a tela do computador. O operador `<<` (operador de inserção) indica que o que está à sua direita será enviado para o objeto `cout`. Neste caso, a mensagem `"Hello, world!"` será escrita na tela. É importante notar que toda instrução em C++ deve ser encerrada com ponto e vírgula (`;`).
+
+Por fim, temos a instrução `return 0;`. Como a função `main` foi declarada com tipo de retorno `int`, ela deve retornar um valor inteiro ao sistema operacional quando terminar. Por convenção, retornar `0` indica que o programa foi executado com sucesso. Qualquer valor diferente de zero pode ser usado para indicar um código de erro específico, mas para nossos exemplos iniciais, usaremos `return 0;`.
+
+É importante mencionar que a função `main` pode ser escrita de outras formas, como `void main()`, que indicaria que ela não retorna valor algum. No entanto, isso não está de acordo com o padrão da linguagem e pode causar problemas de portabilidade. Por isso, sempre utilizaremos `int main()`.
+
+Ao digitar o código, você pode perceber que caracteres acentuados, como o "é" de "Hello, world!", podem aparecer de forma estranha na tela. Isso ocorre por causa da codificação de caracteres utilizada pelo terminal. Existem maneiras de contornar essa questão, mas por enquanto vamos manter nossos textos sem acentos para evitar complicações.
+
+Na próxima aula, exploraremos mais a fundo os conceitos de entrada e saída e começaremos a criar programas mais interativos. Por enquanto, experimente digitar esse código no Visual Studio Code, compilar e executar. Ver seu primeiro programa funcionando é um passo importante no aprendizado de qualquer linguagem!

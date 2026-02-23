@@ -1,0 +1,39 @@
+Thinking...
+Okay, let's tackle this query. The user provided a text that's a transcription from a lecture, and they want it rewritten to be coherent, correctly formatted, and grammatically accurate. The main goal is to restructure the text without any additional comments, just the revised version.
+
+First, I need to read through the original text carefully. It seems like it's a course introduction by Roberto Monteiro, talking about programming fundamentals, the importance of programming, the languages covered, and the course structure. There are some typos and errors, like "proposta de pessoal da amazon" which should probably be "assistente pessoal da Amazon" and "negros que pede" which might be a typo for "Netscape" or "Netscape que pede" (maybe "Netscape que pede" refers to JavaScript's creation by Brendan Eich at Netscape). Also, "lua criada no brasil mas criticou" seems like a mistake; "lua" is a programming language, and "criado no Brasil" might be correct, but "mas criticou" doesn't fit. Maybe it's supposed to be "mas é criticada" or another verb.
+
+I should correct these errors while maintaining the original intent. For example, "a linguagem da arte foi criado pelo bulbo" should be "a linguagem da arte foi criada pelo bulbo" (assuming "bulbo" is a typo for "Bulbo" or another name). Also, "negros que pede" might be "Netscape que pede" (referring to JavaScript's creation by Brendan Eich at Netscape). 
+
+Next, I need to structure the text properly. The original has some run-on sentences and missing punctuation. Breaking it into paragraphs for each section (introduction, languages covered, course structure, objectives, tools used, evaluation) would make it more coherent. 
+
+I should also ensure that the names of the programming languages are correctly spelled and their creators are accurately mentioned. For instance, "JavaScript criada pelo negros que pede" should be "JavaScript, criada pelo Netscape, que pede" (though "que pede" is unclear; maybe it's a mistranslation). Alternatively, it might be "JavaScript, criada pelo Netscape, que é uma linguagem de programação..." to clarify.
+
+The user mentioned that the text needs to be in Portuguese, so I must maintain the language but correct any grammatical issues. Also, some parts like "o assistente pessoal barreto" might be a typo for "Barreto" or another name, but without more context, I'll assume it's a proper noun.
+
+Finally, I'll reformat the text with proper paragraph breaks, correct punctuation, and ensure that the flow is logical. Making sure that the evaluation part is clear and that the course objectives are well-structured. I'll avoid any markdown and just present the revised text as requested.
+...done thinking.
+
+Olá, eu sou Roberto Monteiro e este é o curso *Fundamentos de Programação*. Neste curso, você aprenderá sobre programação, uma habilidade essencial em um mundo dominado por computadores. Esses dispositivos estão presentes em nossos desktops, tablets, smartphones e até em assistentes pessoais, como o assistente pessoal da Amazon, o Alexa. Programas de computador controlam esses equipamentos, e uma pessoa que domina programação possui um diferencial em relação aos demais profissionais do mercado. Você será capaz de controlar dispositivos que estão presentes em praticamente todos os momentos de nossas vidas.  
+
+Neste curso, conheceremos os fundamentos da lógica de programação. Na primeira parte, aprenderemos a programar utilizando blocos de programação e, a partir desses bloc, construiremos algoritmos. Conheceremos as estruturas básicas de sete linguagens de programação:  
+- A linguagem da arte, criada pelo Bulbo,  
+- JavaScript, criada pelo Netscape,  
+- Lua, criada no Brasil,  
+- Uma linguagem de programação criada por mim, utilizada para desenvolvimento de aplicações científicas e utilizada por alguns dos nossos alunos do mestrado e doutorado,  
+- PHP, uma linguagem para construção de aplicações extremamente utilizada em Portugal,  
+- Uma versão de uma linguagem de programação em língua portuguesa, usada apenas para aprendizagem de lógica de programação,  
+- A linguagem Impacto, que também é uma das linguagens mais utilizadas no mundo.  
+
+Ao final do curso, você terá domínio dos fundamentos dessas linguagens, o que permitirá seguir adiante em seus estudos de programação. Na segunda parte, aprenderemos os fundamentos da programação em si e, na última parte, a programação orientada a objetos.  
+
+**Objetivos do curso:**  
+- Conhecer os princípios da lógica computacional, compreender variáveis, operadores, estruturas de decisão e repetição comuns em programação.  
+- Utilizar funções e procedimentos, implementar algoritmos a partir de blocos de programação simples.  
+- Conhecer os fundamentos de linguagens de programação, compreender o paradigma de programação orientada a objetos e construir programas de computadores.  
+
+**Como faremos isso:**  
+Na primeira parte, utilizaremos o ambiente de programação *É uma ferramenta que desenvolvi com meus amigos especificamente para ensinar programação de computadores*. Já utilizamos há vários anos tanto no cenário acadêmico quanto em outras instituições de ensino, como a Universidade Federal de Alagoas, por exemplo. Na segunda e terceira partes, utilizaremos um dos ambientes de programação mais utilizados para a aprendizagem de programação em seis semanas, mas a ideia é mais barata.  
+
+**Avaliação:**  
+Entregaremos uma autoavaliação a partir da solução dos exercícios propostos. Ao final do curso, haverá uma avaliação especial, que será utilizada para atribuir a nota na disciplina.

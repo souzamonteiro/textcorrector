@@ -1,0 +1,42 @@
+Olá! Nesta aula, aprenderemos sobre estruturas homogêneas. Estruturas homogêneas são vetores ou listas nos quais podemos armazenar valores de diversos tipos. A maioria das linguagens de programação permite que se armazene números, strings e até objetos complexos. Neste curso, iremos armazenar especificamente números nesta aula.
+
+Para trabalhar com listas ou vetores, utilizamos a seção "Listas" na paleta de blocos. Os blocos principais são: "criar lista com", "definir elemento da lista" e "obter elemento da lista".
+
+Vamos criar uma variável chamada "notas" e vamos utilizar essa variável para solicitar a digitação de notas pelo usuário. Primeiro, definimos a variável "notas". Para transformar a variável "notas" em uma lista, utilizaremos o bloco "criar lista com". Esse bloco possui três posições por padrão, mas podemos acrescentar qualquer quantidade de posições que desejarmos. Basta arrastar o bloco de item para a quarta posição da lista, ou para quantas posições forem necessárias. Vamos deixar somente três posições para este exemplo.
+
+Para inicializar os elementos da lista, utilizaremos blocos numéricos, já que se trata de uma lista de números. Vou colocar os valores 0, 0 e 0 para criar a lista.
+
+Agora, para percorrer os elementos desta lista, já que a lista criada possui três posições, vamos utilizar um laço de repetição "contar com". Este laço já tem uma variável padrão, "i", e podemos criar outras se desejarmos. No ambiente de blocos, os elementos da lista são numerados a partir da primeira posição como 1, 2, 3 e assim por diante. Assim, o laço "contar com" já começa no número 1 indo até o número 10 por padrão, mas nossa lista só tem três posições. Vamos alterar o valor final para 3, para que possamos preencher cada um dos elementos da lista.
+
+Dentro do laço, vamos utilizar o bloco "definir elemento da lista". Vamos selecionar a lista "notas" e, na posição, vamos utilizar a variável de iteração "i". Queremos definir o elemento na posição "i" como o texto digitado pelo usuário. Para isso, vamos pegar o bloco "perguntar" e encaixá-lo. Como queremos que sejam números (notas, por exemplo, as notas de um aluno), vamos converter a resposta para número utilizando o bloco "número" ou a função de conversão adequada.
+
+Vou fazer uma coisa diferente: vou utilizar o bloco "criar texto" para construir a mensagem que será exibida ao usuário. O que eu quero é que a mensagem exiba o número da posição da nota que será solicitada. Por exemplo: "Digite a nota 1:", depois "Digite a nota 2:", etc. Para isso, vou criar um texto com aspas: "Digite a nota ". Depois, vou adicionar a variável de iteração "i" para mostrar o número. Em seguida, vou adicionar mais um item de texto com ":" e um espaço. Para adicionar mais itens, clico na engrenagem do bloco de texto e adiciono mais espaços para strings.
+
+Ao executar, o programa vai solicitar: "Digite a nota 1:", e eu vou digitar, por exemplo, 6. Depois "Digite a nota 2:", vou digitar 7, e "Digite a nota 3:", vou digitar 8. Agora a lista "notas" contém os valores 6, 7 e 8.
+
+Vamos ver como isso fica nas linguagens de programação. Observe abaixo:
+
+Em Dart, o programa é construído dentro da função "main". São criadas duas variáveis: "notas" é inicializada como um vetor com colchetes, elementos separados por vírgula: `[0, 0, 0]`. Para percorrer o vetor, é utilizado um laço "for". Em Dart, a primeira posição do vetor é a posição 0, por isso, ao acessar o elemento, fazemos `notas[i - 1]` para acertar o índice. Para solicitar a digitação, é utilizado o método `window.prompt` da biblioteca HTML, importada no início. A mensagem é construída concatenando strings: `"Digite a nota " + i.toString() + ":"`. O valor digitado é convertido para número com `double.parse()` e armazenado em `notas[i - 1]`.
+
+Em Python, temos algo semelhante. O laço "for" é construído com `for i in range(1, 4):` e, dentro, utilizamos `input()` para solicitar a digitação. A mensagem é construída com f-strings ou concatenação. O valor é convertido para float com `float()` e armazenado em `notas[i-1]`.
+
+Em JavaScript, é muito parecido com Dart. O vetor é criado com colchetes: `let notas = [0, 0, 0];`. O laço "for" vai de 1 até 3, e a mensagem é construída com template strings ou concatenação. O valor é convertido com `parseFloat()` e armazenado em `notas[i-1]`.
+
+Em Lua, temos a função `testePrompt` criada anteriormente para lidar com a leitura. O vetor é criado com chaves: `notas = {0, 0, 0}`. O laço "for" vai de 1 a 3, e a mensagem é construída concatenando strings com o operador `..`. O valor é convertido com `tonumber()` e armazenado em `notas[i]` (em Lua, os índices começam em 1, então não é necessário subtrair).
+
+Em MaiaScript, o vetor é criado com colchetes: `let notas = [0, 0, 0];`. O laço "for" vai de 1 a 3, e a mensagem é construída com concatenação. O valor é convertido com `parseFloat()` e armazenado em `notas[i-1]` (pois os índices começam em 0). Para exibir a caixa de diálogo, utilizamos `core.prompt()`.
+
+Em PHP, o vetor é criado com `$notas = array(0, 0, 0);`. O laço "for" vai de 1 a 3, e a mensagem é construída com concatenação. O valor é lido com `readline()` e convertido com `floatval()`, e armazenado em `$notas[$i-1]` (índices começam em 0).
+
+Em Portugol, o vetor é criado com `notas = [0, 0, 0]`. O laço "para" vai de 1 até 3, e a mensagem é exibida com `escreva()` e lida com `leia()`. O valor é armazenado em `notas[i]` (em Portugol, os índices também começam em 1, então não é necessário subtrair).
+
+Agora, vamos percorrer esta lista novamente para mostrar os valores na tela. Vou duplicar o bloco "contar com" e, dentro dele, vou utilizar o bloco "imprimir" para mostrar os valores. Vou criar um texto que diga: "Nota na posição i: valor". Para isso, construo uma string com "Nota na posição ", depois a variável "i", depois ": " e, em seguida, o bloco "obter elemento da lista" para obter o valor de "notas" na posição "i".
+
+Ao executar, será exibido: 
+"Nota na posição 1: 6"
+"Nota na posição 2: 7"
+"Nota na posição 3: 8"
+
+Vejamos como isso fica no código gerado. Em Dart, teremos um novo laço "for" com `print("Nota na posição $i: ${notas[i-1]}")`. Em Python, `print(f"Nota na posição {i}: {notas[i-1]}")`. Em JavaScript, `console.log(`Nota na posição ${i}: ${notas[i-1]}`)`. Em Lua, `print("Nota na posição " .. i .. ": " .. notas[i])`. Em MaiaScript, `core.print("Nota na posição " + i + ": " + notas[i-1])`. Em PHP, `echo "Nota na posição $i: " . $notas[$i-1] . "\n";`. Em Portugol, `escreva("Nota na posição ", i, ": ", notas[i])`.
+
+Assim, conseguimos criar, preencher e exibir os elementos de uma lista (vetor) utilizando estruturas de repetição e blocos de lista.

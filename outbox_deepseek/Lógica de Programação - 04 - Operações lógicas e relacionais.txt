@@ -1,0 +1,35 @@
+Olá! Nesta aula, aprenderemos sobre operações lógicas e relacionais.
+
+Na aula anterior, aprendemos a utilizar operadores matemáticos e a realizar operações com variáveis. Vimos também como essas operações são descritas nas principais linguagens de programação. Nesta aula, estenderemos o estudo dos operadores, incluindo os operadores lógicos e os operadores relacionais.
+
+Os operadores lógicos servem para realizar operações que definem se um determinado valor é igual a outro, ou se um determinado valor e outro valor têm determinadas relações. Podemos, por exemplo, quando estivermos analisando decisões dentro do programa, decidir se podemos continuar a execução do programa ou se podemos saltar para outro local do programa, baseado na solução dessas operações que determinam se proposições são verdadeiras ou falsas.
+
+Nós já estamos acostumados, em nosso dia a dia, a trabalhar com proposições, mas de uma maneira muito informal. O cérebro humano é capaz de raciocinar a partir de proposições. Vejamos como estas proposições podem ser construídas utilizando operadores matemáticos e lógicos.
+
+Vou limpar o código e vou apresentar a paleta de lógica. Na paleta de lógica, temos algumas construções que veremos na próxima aula. Mais importantes são os operadores relacionais (este bloco) e os operadores lógicos (o segundo bloco, que tem a letra "e").
+
+Para tanto, vamos construir duas variáveis: variável "a" e variável "b". Vamos definir o valor de "a" e vamos definir o valor de "b". "a" vai ser definido para 1, e "b" vai ser definido para 0. A partir daí, podemos utilizar operadores lógicos. Eles vão retornar como resultado valores verdadeiros ou falsos. Todo operador lógico retorna sempre um valor verdadeiro ou falso, dependendo de como ele opera com os valores que estão à esquerda e à direita do operador.
+
+Vamos criar mais uma variável: variável "c". Ela conterá o resultado das operações que serão feitas com as variáveis "a" e "b". Vamos pegar o bloco lógico "e" e colocar aqui na definição de "c". Nós vamos trabalhar com as variáveis "a" e "b". Vamos encaixar os valores de "a" e "b" à esquerda e à direita do operador "e".
+
+Observe: a operação lógica "e" retornará um valor verdadeiro se o valor à esquerda do operador e o valor à direita dele forem ambos verdadeiros. Em computação, o valor 1 é considerado verdadeiro, enquanto que o valor 0 é considerado falso. Este operador "e" retornará como resultado verdadeiro somente se ambos os operandos forem verdadeiros. Neste caso, "a" vale 1 e "b" vale 0. O operador "e" sempre retorna falso. Vamos colocar agora o bloco "imprimir" para imprimir o valor de "c". Vamos executar. Foi considerado falso, então o valor impresso é 0.
+
+Vamos agora alterar o valor de uma das variáveis. Vamos alterar a variável "b" para 1. Neste caso, "a" será considerado verdadeiro e "b" será considerado verdadeiro. O operador "e" retorna verdadeiro se ambos forem verdadeiros. Então, ao executar, ele retornará verdadeiro, ou seja, 1. Vamos agora inverter: vamos colocar o valor de "a" como 0 e o valor de "b" como 1. Executando, também temos 0, porque basta que um dos valores seja falso e o resultado será falso.
+
+Temos um segundo operador aqui: o operador "ou". Ele funciona diferente. "ou" retornará verdadeiro se qualquer um dos dois valores for verdadeiro. Se um deles for verdadeiro, ele retornará verdadeiro. Neste caso, "b" é verdadeiro, então o resultado será verdadeiro. Vamos executar: ele retornou 1, que é verdadeiro. Vamos agora inverter: "b" se tornou 0 e "a" também 0. Executando, temos falso. Vamos agora colocar os dois valores verdadeiros: retorna verdadeiro, porque basta que um dos dois seja verdadeiro. Agora, coloquemos os dois falsos: retorna falso, porque "ou" retorna falso se ambos os valores forem falsos.
+
+Estas são as duas operações lógicas fundamentais. Vejamos como essas operações lógicas aparecem em cada uma das linguagens de programação. Vou colocar aqui para vermos. Temos as três variáveis sendo criadas, sendo atribuído valor 1 a todas elas. Em seguida, "c" recebeu uma operação lógica. A operação será representada em Python pela palavra "and". Em Dart, ao invés da palavra "and", nós teremos dois "e" comerciais: "&&". Esta forma de representar o operador "e" é comum a muitas linguagens. Veja que eu já havia escrito que a operação "e" é "&&". Em MaiaScript, também "&&". Em PHP, também "&&". Em Portugol, também "&&". Em Python, tínhamos visto também o "and". Para a operação "ou", ele é a palavra em inglês "or". Em JavaScript, são dois pipes: "||". Em Lua, é a palavra "or". Em MaiaScript, dois pipes. Em PHP, dois pipes. Em Portugol, dois pipes. Em Python, já vimos: "or".
+
+Vamos agora aprender como utilizar operações relacionais. Vou remover o bloco lógico e deletá-lo. Vamos agora adicionar um bloco de operações relacionais. Novamente, vamos colocar as variáveis "a" à esquerda e "b" à direita. Neste caso, nós estamos comparando os dois valores utilizando a operação "igual a". Mas temos também as operações: "diferente de", "menor que", "menor ou igual", "maior que", "maior ou igual". Vejamos.
+
+Vamos executar com o operador "igual a". Obtemos falso, porque "a" não é igual a "b". Vejamos agora a operação "diferente de". Obtemos verdadeiro, porque "a" é diferente de "b". Vejamos agora "menor que": o valor de "a" é 1, o valor de "b" é 0. Executando, temos falso, porque 1 não é menor do que 0. "Menor ou igual" também obtemos falso. Mas quando colocamos a operação "maior que", obtemos verdadeiro, porque 1 é maior do que 0. "Maior ou igual" também retornará verdadeiro.
+
+Observe como essas operações aparecem em cada uma das linguagens de programação. "Maior ou igual" é representado pelo sinal de maior do teclado seguido pelo sinal de igual: ">=". Em JavaScript é o mesmo operador. Em Lua, também o operador ">=". Em MaiaScript, igual. Em PHP, também ">=". A única diferença significativa é a presença do cifrão antes dos nomes das variáveis em PHP. É sempre assim. Em Portugol, também ">=". Em Python, já vimos.
+
+Vejamos o operador "diferente de". Neste caso, para Python, a operação diferente é representada pelo sinal de exclamação seguido de igual: "!=". Em Dart, o mesmo operador. Em JavaScript, mesmo operador. Em Lua, é um sinal de til seguido de igual: "~=". Em MaiaScript, "!=". Em PHP, "!=". Em Portugol, também "!=".
+
+Vejamos o operador "igual a". É um duplo operador igual: "==". Porque o operador igual sozinho é atribuição: "a = 1" é atribuição. Quando eu quero comparar, utilizo o duplo operador igual. Em JavaScript, também é um duplo operador igual. Em Lua, também com dois iguais. Em MaiaScript, "==". Em PHP, "==". Em Portugol, "==". E para Python, também "==".
+
+Vejamos o operador "menor ou igual": é a mesma coisa que o operador "maior ou igual", simplesmente o sinal de menor seguido de igual: "<=". Em Dart, "<=". Em JavaScript, "<=". Em Lua, "<=". Em MaiaScript, "<=". Em PHP, "<=". Em Portugol, "<=". Em Python, "<=".
+
+Estes são os operadores relacionais.

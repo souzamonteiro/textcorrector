@@ -1,0 +1,152 @@
+Nesta aula, vamos aprender sobre vetores de caracteres e a utilizar apontadores (ponteiros) em C++. Vamos aproveitar a estrutura básica de um programa para explorar esses conceitos.
+
+Quando declaramos uma variável do tipo vetor de caracteres em C++, estamos na verdade criando um espaço na memória que funciona como uma matriz linear. Uma matriz é uma coleção de elementos do mesmo tipo, armazenados de forma contígua na memória. No caso de uma string, temos uma matriz unidimensional (um vetor) onde cada posição armazena um caractere. É possível trabalhar com matrizes de múltiplas dimensões, mas neste momento focaremos nos vetores de caracteres, que são fundamentais para manipular textos.
+
+Vamos declarar um vetor de caracteres com tamanho definido:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    char texto[20];  // Vetor que pode armazenar até 19 caracteres + o terminador nulo
+    
+    cout << "Escreva uma palavra: ";
+    cin >> texto;
+    
+    cout << "Você digitou: " << texto << endl;
+    
+    return 0;
+}
+```
+
+Neste exemplo, criamos um vetor chamado `texto` com capacidade para 20 caracteres. Quando o usuário digita uma palavra, ela é armazenada nesse vetor. Podemos exibir a palavra completa simplesmente usando `cout << texto`.
+
+Agora, vamos acessar cada caractere individualmente. Para isso, usamos um laço `for` e a função `strlen` da biblioteca `<cstring>`, que retorna o comprimento de uma string.
+
+```cpp
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char texto[20];
+    
+    cout << "Escreva uma palavra: ";
+    cin >> texto;
+    
+    int tamanho = strlen(texto);
+    
+    for (int i = 0; i < tamanho; i++) {
+        cout << "Caractere na posição " << i << ": " << texto[i] << endl;
+    }
+    
+    return 0;
+}
+```
+
+Aqui, percorremos o vetor posição por posição, exibindo cada caractere em uma linha. O acesso a cada elemento é feito com `texto[i]`, onde `i` é o índice (a primeira posição é 0).
+
+Podemos também modificar caracteres individualmente:
+
+```cpp
+texto[0] = '@';  // Substitui o primeiro caractere por '@'
+cout << "Palavra modificada: " << texto << endl;
+```
+
+Uma característica importante em C++ é que todo vetor pode ser tratado como um ponteiro. Um **ponteiro** é uma variável especial que armazena um endereço de memória. Com ponteiros, podemos usar aritmética para navegar pelos elementos do vetor.
+
+Vamos criar um ponteiro para caractere e fazê-lo apontar para o início do nosso vetor `texto`.
+
+```cpp
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char texto[20];
+    char *p;  // Declara um ponteiro para caractere
+    
+    cout << "Escreva uma palavra: ";
+    cin >> texto;
+    
+    p = texto;  // O ponteiro p aponta para o início do vetor texto
+    
+    // Exibe o endereço de memória apontado por p
+    cout << "Endereço apontado por p: " << p << endl;
+    
+    return 0;
+}
+```
+
+Observe que `p = texto` não usa o operador `&` (endereço) porque o nome do vetor já representa o endereço do seu primeiro elemento. Quando usamos `cout << p`, o C++ é inteligente e entende que queremos exibir a string completa, não o endereço. Para exibir o endereço numérico, precisamos forçar a interpretação como inteiro, usando um casting:
+
+```cpp
+cout << "Endereço numérico: " << (long)p << endl;
+```
+
+Agora, vamos usar o ponteiro para percorrer a string e exibir cada caractere. Uma característica das strings em C++ é que elas são terminadas pelo caractere nulo `'\0'` (valor zero). Podemos usar isso como condição de parada.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    char texto[20];
+    char *p;
+    
+    cout << "Escreva uma palavra: ";
+    cin >> texto;
+    
+    p = texto;  // p aponta para o início da string
+    
+    while (*p) {  // Enquanto o caractere apontado não for '\0'
+        cout << *p << endl;  // Exibe o caractere atual
+        p++;  // Avança o ponteiro para a próxima posição
+    }
+    
+    return 0;
+}
+```
+
+O laço `while (*p)` funciona porque `*p` é o caractere apontado por `p`. Quando esse caractere for `'\0'` (que vale zero), a condição se torna falsa e o laço termina. A cada iteração, avançamos o ponteiro com `p++`, fazendo com que ele aponte para o próximo caractere.
+
+Agora, vamos criar uma função que utiliza ponteiros para converter uma string para maiúsculas. Precisamos da biblioteca `<cctype>` para usar a função `toupper`.
+
+```cpp
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+void converterParaMaiusculo(char *origem, char *destino) {
+    while (*origem) {
+        *destino = toupper(*origem);  // Converte para maiúsculo e armazena
+        origem++;
+        destino++;
+    }
+    *destino = '\0';  // Adiciona o terminador nulo no destino
+}
+
+int main() {
+    char texto[20];
+    char textoMaiusculo[20];
+    
+    cout << "Escreva uma palavra: ";
+    cin >> texto;
+    
+    converterParaMaiusculo(texto, textoMaiusculo);
+    
+    cout << "Original: " << texto << endl;
+    cout << "Maiúsculo: " << textoMaiusculo << endl;
+    
+    return 0;
+}
+```
+
+Nesta função, recebemos dois ponteiros: `origem` aponta para a string original, e `destino` aponta para onde queremos armazenar o resultado. Percorremos a string de origem caractere por caractere, convertendo cada um para maiúsculo com `toupper` e armazenando no destino. Ao final, adicionamos o caractere nulo (`'\0'`) para que a string de destino seja terminada corretamente.
+
+Observe que, ao chamar a função, passamos `texto` e `textoMaiusculo` diretamente, sem usar `&`. Isso porque, como vimos, o nome do vetor já representa o endereço do primeiro elemento.
+
+É importante notar a diferença entre passar uma variável comum e um vetor para uma função. Quando passamos uma variável comum, a função recebe uma cópia do valor. Quando passamos um vetor (ou um ponteiro), a função recebe o endereço de memória e pode modificar o conteúdo original.
+
+Os conceitos de vetores e ponteiros são fundamentais em C++ e abrem caminho para a manipulação avançada de dados. Na próxima aula, continuaremos explorando esses tópicos e veremos mais exemplos práticos. Até lá!

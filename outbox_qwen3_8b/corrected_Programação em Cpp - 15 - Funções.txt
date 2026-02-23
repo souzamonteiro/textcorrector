@@ -1,0 +1,23 @@
+Thinking...
+Okay, the user provided a text that's a transcription of a lecture, but it's messy with typos, unclear terms, and some parts that don't make sense. They want it rewritten to be coherent, correctly formatted, and linguistically accurate. The main challenge is to untangle the jumbled content and make sense of the technical terms related to functions and procedures in programming.
+
+First, I'll read through the original text carefully to identify the key points. There are mentions of functions, procedures, parameters, return values, and examples like the "exibir mensagens" function. The user also talks about recursion, like calculating factorial and sine functions, and mentions vectors of characters.
+
+I notice some parts are repeated or garbled, like "ah ah ah" which might be filler or misheard words. I'll need to ignore those and focus on the actual content. Terms like "<UNK>" are placeholders for unknown words, so I'll replace them with appropriate terms based on context.
+
+The user mentions creating functions that return values versus procedures that don't. They also discuss parameter passing, string handling, and recursion. I'll structure the rewritten text to first explain functions and procedures, then move on to examples like the display message function, the square function, and recursion in factorial and sine calculations.
+
+I should ensure the text is in Portuguese, as the original is, and maintain technical accuracy. Also, check for correct formatting, like using code blocks for examples and proper terminology. Avoid any markdown, just plain text with clear paragraphs and sections.
+
+Finally, I'll review the rewritten text to ensure it's coherent, flows logically, and correctly addresses the original content without the errors. Make sure all technical terms are accurately translated or explained, and the examples are clear and relevant.
+...done thinking.
+
+Nesta aula, aprenderemos a criar funções e procedimentos em C. Vamos falar sobre funções, que são blocos de código reutilizáveis que realizam tarefas específicas. Primeiro, criei um novo arquivo, que é o esqueleto descrito no produto. O conteúdo aborda conceitos básicos de programação, como funções que retornam valores e aquelas que não retornam.  
+
+A função que tem várias assinaturas (ou protótipos) é chamada de função com parâmetros. A assinatura mais comum é a que não recebe parâmetros e não retorna valores, sendo chamada de procedimento. Por exemplo, a função `exibir_mensagens` recebe um parâmetro do tipo `char` (cadeia de caracteres) e exibe uma mensagem no console. O parâmetro é passado para a função, que processa e exibe o conteúdo.  
+
+As funções podem ser classificadas em dois tipos: aquelas que retornam valores (funções) e aquelas que não retornam (procedimentos). Para criar uma função que retorna um valor, utilizamos a palavra-chave `return`. Por exemplo, a função `quadrado` recebe um valor `x`, calcula `x * x` e retorna o resultado.  
+
+Além disso, discutimos o conceito de funções reentrantes, que são capazes de chamar a si mesmas. Isso é comum em algoritmos recursivos, como o cálculo do fatorial ou a função seno, que utilizam recursividade para resolver problemas complexos.  
+
+O texto também menciona vetores de caracteres (strings) e como manipular esses dados em funções. Por fim, destacamos a importância de seguir boas práticas de programação, como a correta passagem de parâmetros e a organização do código.

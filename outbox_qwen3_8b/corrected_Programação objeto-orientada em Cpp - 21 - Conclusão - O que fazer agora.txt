@@ -1,0 +1,21 @@
+Thinking...
+Okay, the user wants me to rewrite the provided text to make it coherent, properly formatted, and correct in terms of language and theme. They mentioned that the original text is a transcription from an audio, so there might be some errors or awkward phrasing.
+
+First, I'll read through the original text carefully to understand the main points. The text seems to be about programming skills, suggesting people to read more about programming, mention books available on Amazon, and talk about different languages like Java, JavaScript, PHP. There's also a part about making mistakes, choosing a language to focus on, and practicing daily.
+
+Now, I need to correct any grammatical errors. For example, "leia mais sobre programação existem diversos bons livros disponíveis na amazon" should be "Leia mais sobre programação. Existem diversos bons livros disponíveis na Amazon." Also, "além disso ao livro de diversas formas" might be a typo; maybe they meant "além disso, o livro está disponível em diversas formas" or "em diferentes formatos."
+
+The phrase "mas mais importantes da coleção abordamos uma coleção muito somos este livro" is confusing. It seems like a mix of sentences. Perhaps it should be "A coleção abordada é muito importante, e este livro apresenta os conceitos de ser mais..." to make sense.
+
+"mas de uma forma bastante intuitiva e fácil aprender uma nova linguagem de programação" can be rephrased to "de uma forma bastante intuitiva e fácil de aprender uma nova linguagem de programação" for better flow.
+
+"as principais linguagens de programação além dos demais mas só usei java javascript no arquivo php" needs correction. Maybe "as principais linguagens de programação, além das demais, mas só usei Java, JavaScript no arquivo PHP." Also, "partam errando" might be "parta errando" or "parta errar" depending on context.
+
+"seleciona uma dessas linguagens e se aprofunde no assunto se você desejar pode aprender pacto comigo na dele" should be "seleciona uma dessas linguagens e se aprofunde no assunto. Se desejar, pode aprender comigo nesse livro." Also, "acima de tudo programme programe todos os dias" should be "acima de tudo, programar. Programe todos os dias."
+
+Finally, "quanto mais você programar melhor programador se tornará" can be "quanto mais você programar, melhor programador se tornará."
+
+Putting it all together, ensuring coherence and proper grammar, while keeping the original intent about learning programming through books and practice.
+...done thinking.
+
+Leia mais sobre programação. Existem diversos bons livros disponíveis na Amazon, além disso, o livro também está disponível em inglês e francês. Mais importante, a coleção abordada é muito relevante. Este livro apresenta os conceitos de ser mais, de uma forma bastante intuitiva e fácil de aprender uma nova linguagem de programação. As principais linguagens de programação, além das demais, incluem Java, JavaScript e PHP. Parta errando, selecione uma dessas linguagens e se aprofunde no assunto. Se desejar, pode aprender comigo nesse livro. Acima de tudo, programar. Programe todos os dias e, quanto mais você programar, melhor programador se tornará.

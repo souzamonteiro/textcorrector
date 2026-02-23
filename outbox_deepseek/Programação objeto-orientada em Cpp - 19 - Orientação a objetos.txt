@@ -1,0 +1,402 @@
+Nesta aula, vamos aprender sobre orientação a objetos em C++. Faremos uma introdução ao paradigma da orientação a objetos e veremos como criar e utilizar objetos na linguagem C++, explorando os diversos elementos que esse paradigma oferece para construir aplicações mais reutilizáveis, fáceis de manter e com menos possibilidade de erros. Um código bem estruturado e organizado é mais limpo, mais fácil de compreender e, naturalmente, tende a ter menos defeitos.
+
+Vamos criar um novo arquivo fonte e salvá-lo com um nome significativo, como "classes.cpp". Uma classe é como um molde, um modelo a partir do qual podemos construir objetos. O nome da classe deve ser significativo, e por convenção, utilizamos letra maiúscula no início (padrão CamelCase). Isso não é obrigatório, mas é uma boa prática adotada por programadores C++.
+
+## O que são objetos e como eles nos ajudam?
+
+No dia a dia, estamos acostumados a pensar em termos de objetos. Objetos são entidades que estão ao nosso redor e com as quais interagimos. Nós mesmos somos objetos! A ideia de objeto é algo muito natural para nós.
+
+Observe que os objetos têm características próprias (atributos) e interagem com o ambiente ou sofrem interferências do meio onde estão inseridos (comportamentos). Além disso, os objetos podem ser copiados – podemos criar cópias de um objeto a partir de um molde. Por exemplo, a partir de um molde de caneca, podemos produzir várias canecas iguais.
+
+Algumas características dos objetos podem se modificar ao longo de sua existência, enquanto outras são estáticas. A cor de uma caneca, por exemplo, pode ser um atributo que a diferencia de outra caneca, mas pode ser alterada se pintarmos a caneca.
+
+Quando transpomos esses conceitos para a programação, por meio da abstração, criamos o paradigma da orientação a objetos. Nesse paradigma:
+- Chamamos as características dos objetos de **atributos** ou **propriedades**.
+- Chamamos as funcionalidades dos objetos de **métodos**.
+
+Pense nos atributos como variáveis que existem dentro do objeto, e nos métodos como funções ou procedimentos que também pertencem ao objeto.
+
+## Criando uma classe em C++
+
+Para criar objetos, precisamos primeiro definir o molde, que em orientação a objetos chamamos de **classe**. Vamos construir um programa básico orientado a objetos com uma classe simples.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Retangulo {
+private:
+    int altura;
+    int base;
+    
+public:
+    // Método para atribuir valores
+    void setValores(int a, int b) {
+        altura = a;
+        base = b;
+    }
+    
+    // Método para calcular a área
+    int calcularArea() {
+        return base * altura;
+    }
+};
+
+int main() {
+    Retangulo ret1;
+    
+    ret1.setValores(4, 3);
+    cout << "Área do retângulo: " << ret1.calcularArea() << endl;
+    
+    return 0;
+}
+```
+
+### Visibilidade dos membros da classe
+
+Em C++, os membros de uma classe (atributos e métodos) podem ter três níveis de visibilidade:
+
+- **public**: Os membros são acessíveis de qualquer lugar, por qualquer objeto ou função.
+- **private**: Os membros são acessíveis somente dentro da própria classe. É o nível padrão se não especificarmos nada.
+- **protected**: Os membros são acessíveis na própria classe e em classes derivadas (veremos isso no conceito de herança).
+
+No exemplo acima, os atributos `altura` e `base` são `private`, ou seja, não podem ser acessados diretamente de fora da classe. Por isso, criamos o método público `setValores` para atribuir valores a eles. O método `calcularArea` também é público e pode ser chamado a partir do objeto.
+
+Se tentássemos acessar `ret1.altura` diretamente no `main`, o compilador geraria um erro, pois o atributo é privado.
+
+## Construtores e destrutores
+
+Um **construtor** é um método especial que é chamado automaticamente no momento em que um objeto é criado. O construtor tem o mesmo nome da classe e não possui tipo de retorno. Podemos usá-lo para inicializar os atributos do objeto.
+
+Um **destrutor** é um método especial chamado quando o objeto é destruído (por exemplo, quando sai de escopo). O destrutor tem o mesmo nome da classe precedido por `~` (til).
+
+Vamos modificar nossa classe para incluir construtores e um destrutor:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Retangulo {
+private:
+    int altura;
+    int base;
+    
+public:
+    // Construtor padrão (sem parâmetros)
+    Retangulo() {
+        cout << "Construtor padrão chamado." << endl;
+        altura = 0;
+        base = 0;
+    }
+    
+    // Construtor com parâmetros
+    Retangulo(int a, int b) {
+        cout << "Construtor com parâmetros chamado." << endl;
+        altura = a;
+        base = b;
+    }
+    
+    // Destrutor
+    ~Retangulo() {
+        cout << "Destrutor chamado." << endl;
+    }
+    
+    void setValores(int a, int b) {
+        altura = a;
+        base = b;
+    }
+    
+    int calcularArea() {
+        return base * altura;
+    }
+};
+
+int main() {
+    Retangulo ret1;           // Chama o construtor padrão
+    Retangulo ret2(4, 3);     // Chama o construtor com parâmetros
+    
+    cout << "Área do ret2: " << ret2.calcularArea() << endl;
+    
+    return 0;
+    // Os destrutores são chamados automaticamente aqui
+}
+```
+
+## Sobrecarga de operadores
+
+Um recurso poderoso do C++ é a **sobrecarga de operadores**. Ela permite que objetos de classes definidas por nós possam ser operados por operadores comuns da linguagem, como `+`, `-`, `*`, etc. Por exemplo, podemos criar uma classe `Vetor` e definir como somar dois vetores usando o operador `+`.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Vetor {
+public:
+    int x, y;
+    
+    // Construtor padrão
+    Vetor() : x(0), y(0) {}
+    
+    // Construtor com parâmetros
+    Vetor(int a, int b) : x(a), y(b) {}
+    
+    // Sobrecarga do operador +
+    Vetor operator+(const Vetor& outro) {
+        Vetor temp;
+        temp.x = x + outro.x;
+        temp.y = y + outro.y;
+        return temp;
+    }
+};
+
+int main() {
+    Vetor v1(3, 1);
+    Vetor v2(1, 2);
+    
+    Vetor v3 = v1 + v2;  // Usando o operador sobrecarregado
+    
+    cout << "v3.x = " << v3.x << ", v3.y = " << v3.y << endl;
+    
+    return 0;
+}
+```
+
+Neste exemplo, definimos como dois objetos `Vetor` devem ser somados. O operador `+` agora funciona com nossos vetores.
+
+## Sobrecarga de funções
+
+Outro recurso importante é a **sobrecarga de funções**. Em C++, podemos ter várias funções com o mesmo nome, desde que suas assinaturas (tipos e/ou número de parâmetros) sejam diferentes.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Função para converter Fahrenheit para Celsius (versão com float)
+float fahrenheitParaCelsius(float f) {
+    return (f - 32.0) * 5.0 / 9.0;
+}
+
+// Sobrecarga para receber inteiro
+float fahrenheitParaCelsius(int f) {
+    return (f - 32) * 5.0 / 9.0;
+}
+
+int main() {
+    float tempF1 = 100.5;
+    int tempF2 = 32;
+    
+    cout << tempF1 << "°F = " << fahrenheitParaCelsius(tempF1) << "°C" << endl;
+    cout << tempF2 << "°F = " << fahrenheitParaCelsius(tempF2) << "°C" << endl;
+    
+    return 0;
+}
+```
+
+O compilador escolhe automaticamente a versão correta da função com base no tipo do argumento passado.
+
+## Herança
+
+A **herança** é um dos conceitos mais importantes da orientação a objetos. Ela permite criar uma nova classe a partir de uma classe existente, aproveitando seus atributos e métodos. A classe existente é chamada de **classe base** (ou pai, ou superclasse), e a nova classe é chamada de **classe derivada** (ou filha, ou subclasse).
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Classe base (genérica)
+class Poligono {
+protected:
+    int altura;
+    int largura;
+    
+public:
+    void setValores(int a, int l) {
+        altura = a;
+        largura = l;
+    }
+};
+
+// Classe derivada: Retangulo
+class Retangulo : public Poligono {
+public:
+    int calcularArea() {
+        return largura * altura;
+    }
+};
+
+// Classe derivada: Triangulo
+class Triangulo : public Poligono {
+public:
+    int calcularArea() {
+        return (largura * altura) / 2;
+    }
+};
+
+int main() {
+    Retangulo ret;
+    Triangulo tri;
+    
+    ret.setValores(4, 3);
+    tri.setValores(4, 3);
+    
+    cout << "Área do retângulo: " << ret.calcularArea() << endl;
+    cout << "Área do triângulo: " << tri.calcularArea() << endl;
+    
+    return 0;
+}
+```
+
+Observe que as classes `Retangulo` e `Triangulo` não precisam redefinir os atributos `altura` e `largura` nem o método `setValores` – eles são herdados da classe `Poligono`. Cada classe derivada implementa seu próprio método `calcularArea` de forma apropriada.
+
+A visibilidade `protected` permite que os membros sejam acessíveis nas classes derivadas, mas não fora delas.
+
+## Polimorfismo e métodos virtuais
+
+O **polimorfismo** é a capacidade de um objeto assumir várias formas. Em C++, isso é implementado com **métodos virtuais**. Um método virtual na classe base indica que as classes derivadas podem (e devem) fornecer sua própria implementação. Quando chamamos esse método através de um ponteiro ou referência para a classe base, a versão correta da classe derivada será executada.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Poligono {
+protected:
+    int altura, largura;
+public:
+    void setValores(int a, int l) {
+        altura = a;
+        largura = l;
+    }
+    
+    // Método virtual
+    virtual int calcularArea() {
+        return 0;  // Implementação genérica
+    }
+};
+
+class Retangulo : public Poligono {
+public:
+    int calcularArea() override {
+        return largura * altura;
+    }
+};
+
+class Triangulo : public Poligono {
+public:
+    int calcularArea() override {
+        return (largura * altura) / 2;
+    }
+};
+
+int main() {
+    Poligono* p;
+    Retangulo ret;
+    Triangulo tri;
+    
+    ret.setValores(4, 3);
+    tri.setValores(4, 3);
+    
+    p = &ret;
+    cout << "Área do retângulo: " << p->calcularArea() << endl;
+    
+    p = &tri;
+    cout << "Área do triângulo: " << p->calcularArea() << endl;
+    
+    return 0;
+}
+```
+
+A palavra-chave `virtual` na classe base e `override` nas classes derivadas (opcional, mas recomendado) garantem que a função correta seja chamada em cada caso.
+
+## Namespaces
+
+**Namespaces** (espaços de nomes) são uma forma de organizar o código e evitar conflitos de nomes. Podemos agrupar classes, funções e variáveis relacionadas dentro de um namespace.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+namespace ConstantesMatematicas {
+    const double PI = 3.14159;
+    const double NUMERO_DE_OURO = 1.61803;
+}
+
+int main() {
+    cout << "PI: " << ConstantesMatematicas::PI << endl;
+    cout << "Número de ouro: " << ConstantesMatematicas::NUMERO_DE_OURO << endl;
+    
+    return 0;
+}
+```
+
+Para acessar um membro de um namespace, usamos o operador de resolução de escopo `::`.
+
+## Tratamento de exceções
+
+Exceções são eventos que ocorrem durante a execução do programa e interrompem o fluxo normal. Em C++, usamos as palavras-chave `try`, `throw` e `catch` para tratar exceções.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    try {
+        int idade;
+        cout << "Digite sua idade: ";
+        cin >> idade;
+        
+        if (idade < 0 || idade > 150) {
+            throw "Idade inválida!";
+        }
+        
+        cout << "Idade válida: " << idade << endl;
+    }
+    catch (const char* erro) {
+        cout << "Erro: " << erro << endl;
+    }
+    
+    return 0;
+}
+```
+
+O bloco `try` contém o código que pode gerar uma exceção. Se uma exceção for lançada com `throw`, o fluxo é desviado para o bloco `catch` correspondente ao tipo da exceção.
+
+## Templates (Modelos)
+
+**Templates** permitem escrever código genérico que funciona com diferentes tipos de dados. Em vez de escrever várias versões de uma função para cada tipo, escrevemos uma única função template.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+template <typename T>
+T maximo(T a, T b) {
+    return (a > b) ? a : b;
+}
+
+int main() {
+    cout << "Máximo de 3 e 5: " << maximo(3, 5) << endl;
+    cout << "Máximo de 3.5 e 2.1: " << maximo(3.5, 2.1) << endl;
+    cout << "Máximo de 'a' e 'z': " << maximo('a', 'z') << endl;
+    
+    return 0;
+}
+```
+
+A palavra-chave `template <typename T>` indica que estamos definindo um template, e `T` é um parâmetro de tipo que será substituído pelo tipo real no momento da chamada.
+
+## Conclusão
+
+Nesta aula, introduzimos os conceitos fundamentais da orientação a objetos em C++:
+- Classes e objetos
+- Atributos e métodos
+- Visibilidade (public, private, protected)
+- Construtores e destrutores
+- Sobrecarga de operadores e funções
+- Herança
+- Polimorfismo e métodos virtuais
+- Namespaces
+- Tratamento de exceções
+- Templates
+
+Esses conceitos formam a base para construir aplicações bem estruturadas, reutilizáveis e de fácil manutenção. Nas próximas aulas, aplicaremos esses conceitos na construção de um projeto prático, como um motor de diálogo para um jogo, onde personagens poderão conversar entre si de forma automática.
+
+Vamos praticar com exercícios e, em seguida, começar a modelar as classes do nosso jogo. Até lá!

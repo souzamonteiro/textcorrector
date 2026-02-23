@@ -1,0 +1,97 @@
+Nesta aula, vamos aprender a criar funções e procedimentos em C++. Vamos começar criando um novo arquivo com a estrutura básica de um programa em C++.
+
+Como já vimos, todo programa em C++ tem pelo menos uma função: a função `main`. Ela pode ter diferentes assinaturas, mas a mais comum é `int main()`, que significa que a função não recebe parâmetros e retorna um valor inteiro. Quando o programa retorna zero, isso indica que ele foi executado com sucesso. Para retornar um valor, usamos a palavra-chave `return`.
+
+Em C++, existem dois tipos básicos de funções: as que retornam um valor e as que não retornam. As que não retornam valor são frequentemente chamadas de **procedimentos**, embora em C++ tecnicamente sejam funções com tipo de retorno `void`.
+
+Vamos criar um procedimento, ou seja, uma função que não retorna valor. Para isso, usamos `void` antes do nome da função.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Procedimento que exibe uma mensagem
+void exibirMensagem(char texto[]) {
+    cout << texto << endl;
+}
+
+int main() {
+    exibirMensagem("Olá, mundo!");
+    return 0;
+}
+```
+
+Neste exemplo, a função `exibirMensagem` recebe um parâmetro do tipo `char[]`, que é uma cadeia de caracteres (uma string). Ao chamar a função em `main`, passamos a mensagem que queremos exibir. Observe que usamos o padrão de nomenclatura chamado "camelCase", onde a primeira letra da primeira palavra é minúscula e as palavras seguintes começam com maiúscula. Isso é comum em C++ e especialmente em programação orientada a objetos.
+
+Agora, vamos criar uma função que retorna um valor. Faremos uma função que calcula o quadrado de um número inteiro.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Função que retorna o quadrado de um número
+int quadrado(int x) {
+    return x * x;
+}
+
+int main() {
+    int resultado = quadrado(5);
+    cout << "O quadrado de 5 é: " << resultado << endl;
+    return 0;
+}
+```
+
+A função `quadrado` recebe um parâmetro inteiro `x` e retorna um valor inteiro – o resultado da multiplicação de `x` por ele mesmo. Em `main`, chamamos a função e armazenamos o resultado em uma variável para depois exibi-lo.
+
+Podemos também usar a função diretamente dentro do comando `cout`:
+
+```cpp
+cout << "O quadrado de 7 é: " << quadrado(7) << endl;
+```
+
+Um conceito importante sobre funções em C++ é que elas podem ser **recursivas**, ou seja, uma função pode chamar a si mesma. Isso é útil para resolver certos tipos de problemas, como o cálculo do fatorial de um número.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int fatorial(int n) {
+    if (n <= 1) {
+        return 1;
+    } else {
+        return n * fatorial(n - 1);
+    }
+}
+
+int main() {
+    int numero = 5;
+    cout << "O fatorial de " << numero << " é: " << fatorial(numero) << endl;
+    return 0;
+}
+```
+
+Neste exemplo, a função `fatorial` chama a si mesma com um argumento menor (`n-1`) até atingir a condição de parada (`n <= 1`). A recursividade é um conceito poderoso e será explorada em exercícios futuros, como no cálculo de funções matemáticas como seno, cosseno, entre outras.
+
+Outro ponto importante: as funções devem ser declaradas ou definidas antes de serem usadas. Em nossos exemplos, definimos as funções antes da função `main`. Se quisermos defini-las depois, precisamos fazer uma declaração antecipada (protótipo da função) antes do `main`.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Protótipo da função
+int quadrado(int x);
+
+int main() {
+    cout << "O quadrado de 9 é: " << quadrado(9) << endl;
+    return 0;
+}
+
+// Definição da função
+int quadrado(int x) {
+    return x * x;
+}
+```
+
+Isso é útil para organizar o código, especialmente em programas maiores.
+
+Na próxima aula, exploraremos o conceito de ponteiros, que nos ajudará a entender melhor como funcionam as strings e os vetores em C++. Os ponteiros são fundamentais para manipular cadeias de caracteres e estruturas de dados mais complexas. Até lá!

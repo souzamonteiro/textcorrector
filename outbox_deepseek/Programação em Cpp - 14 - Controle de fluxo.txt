@@ -1,0 +1,194 @@
+Nesta aula, vamos estudar as estruturas de controle de fluxo na linguagem C++. Na aula passada, falamos sobre os operadores, que são fundamentais para controlar o fluxo de um programa. Com eles, podemos criar condições que avaliam se uma expressão é verdadeira ou falsa, e a partir disso, decidir quais blocos de código serão executados. Também podemos fazer com que blocos de código sejam repetidos enquanto uma condição se mantiver verdadeira ou falsa.
+
+Vamos começar com as **estruturas condicionais**. A mais simples delas é o comando `if`. Ele avalia uma condição e, se ela for verdadeira, executa um bloco de código.
+
+Vamos construir um programa que solicita a idade do usuário e, dependendo do valor informado, exibe uma mensagem específica.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int idade;
+    
+    cout << "Informe sua idade: ";
+    cin >> idade;
+    
+    if (idade >= 18) {
+        cout << "Você é maior de idade.";
+    }
+    
+    return 0;
+}
+```
+
+Neste exemplo, se a idade for maior ou igual a 18, a mensagem "Você é maior de idade." será exibida. Caso contrário, o programa não faz nada.
+
+Podemos acrescentar uma alternativa usando o `else`, que executa um bloco de código quando a condição do `if` é falsa.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int idade;
+    
+    cout << "Informe sua idade: ";
+    cin >> idade;
+    
+    if (idade >= 18) {
+        cout << "Você é maior de idade.";
+    } else {
+        cout << "Você é menor de idade.";
+    }
+    
+    return 0;
+}
+```
+
+Agora, se a idade for menor que 18, a mensagem "Você é menor de idade." será exibida.
+
+Podemos também encadear várias condições usando `else if`. Isso é útil quando temos mais de duas possibilidades.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int idade;
+    
+    cout << "Informe sua idade: ";
+    cin >> idade;
+    
+    if (idade < 12) {
+        cout << "Você é uma criança.";
+    } else if (idade < 18) {
+        cout << "Você é um adolescente.";
+    } else if (idade < 60) {
+        cout << "Você é um adulto.";
+    } else {
+        cout << "Você é um idoso.";
+    }
+    
+    return 0;
+}
+```
+
+Neste exemplo, o programa verifica cada condição em ordem. Assim que encontra uma condição verdadeira, executa o bloco correspondente e ignora as demais.
+
+Outra estrutura condicional muito útil é o `switch`. Ela é especialmente adequada quando queremos comparar uma variável com diversos valores constantes possíveis.
+
+Vamos criar um programa que pergunta o gênero do usuário e exibe uma saudação apropriada.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    char genero;
+    
+    cout << "Informe seu gênero (M para masculino, F para feminino): ";
+    cin >> genero;
+    
+    switch (genero) {
+        case 'M':
+        case 'm':
+            cout << "Olá, cavalheiro!";
+            break;
+        case 'F':
+        case 'f':
+            cout << "Olá, madame!";
+            break;
+        default:
+            cout << "Gênero não especificado.";
+    }
+    
+    return 0;
+}
+```
+
+Observe alguns detalhes importantes sobre o `switch`:
+- A expressão dentro do `switch` precisa ser de um tipo inteiro ou caractere.
+- Cada `case` deve ser seguido de um valor constante.
+- O comando `break` é usado para sair do `switch` após executar o bloco desejado. Se não colocarmos o `break`, o programa continuará executando os `cases` seguintes (isso é chamado de *fall-through*).
+- O `default` é opcional e executa quando nenhum dos `cases` corresponde ao valor testado.
+
+No exemplo, usamos o *fall-through* propositalmente: se o usuário digitar 'M' ou 'm', o mesmo bloco será executado. O mesmo vale para 'F' e 'f'.
+
+Agora, vamos estudar as **estruturas de repetição** (laços). Elas permitem executar um bloco de código várias vezes.
+
+A estrutura mais básica é o `while`. Ela executa um bloco enquanto uma condição for verdadeira.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int contador = 0;
+    
+    while (contador < 5) {
+        cout << "Contador: " << contador << endl;
+        contador++;  // Incrementa o contador
+    }
+    
+    return 0;
+}
+```
+
+Neste exemplo, o programa exibirá os números de 0 a 4. A cada iteração, incrementamos o contador para que, eventualmente, a condição `contador < 5` se torne falsa e o laço termine. Se esquecermos de incrementar, teremos um loop infinito.
+
+Uma variação é o `do...while`. A diferença é que ele executa o bloco pelo menos uma vez, antes de verificar a condição.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int contador = 0;
+    
+    do {
+        cout << "Contador: " << contador << endl;
+        contador++;
+    } while (contador < 5);
+    
+    return 0;
+}
+```
+
+O resultado será o mesmo do exemplo anterior, mas se a condição inicial já fosse falsa (por exemplo, se `contador` começasse em 10), o bloco ainda assim seria executado uma vez.
+
+Por fim, temos a estrutura `for`, que é muito utilizada quando sabemos exatamente quantas vezes queremos repetir um bloco. Ela combina em uma única linha a inicialização de uma variável, a condição de continuação e o incremento (ou decremento).
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 0; i < 5; i++) {
+        cout << "Valor de i: " << i << endl;
+    }
+    
+    return 0;
+}
+```
+
+Este programa faz exatamente a mesma coisa que os exemplos anteriores com `while`. A estrutura `for` é muito compacta e expressiva.
+
+Uma característica interessante da linguagem C++ é que podemos usar qualquer tipo de dado que suporte operações de incremento e comparação em um laço `for`. Por exemplo, podemos usar uma variável do tipo `char` para percorrer letras do alfabeto:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (char letra = 'A'; letra <= 'Z'; letra++) {
+        cout << letra << " ";
+    }
+    
+    return 0;
+}
+```
+
+Este programa exibirá as letras de A a Z. Internamente, o computador trata os caracteres como números (seguindo a tabela ASCII), por isso é possível incrementá-los. Essa propriedade é muito útil em situações como criptografia simples, onde podemos realizar operações matemáticas sobre caracteres para transformá-los.
+
+Com as estruturas condicionais e de repetição, temos agora as ferramentas necessárias para construir programas muito mais interessantes e complexos. Na próxima aula, continuaremos explorando esses conceitos e criaremos novos exemplos práticos. Até lá!

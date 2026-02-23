@@ -1,0 +1,107 @@
+Thinking...
+Okay, I need to help the user by rewriting their provided text. Let me start by reading through the original text carefully. It's a transcription of a lesson about functions and procedures, but it's a bit messy with some errors and unclear parts. The user wants it to be coherent, properly formatted, and grammatically correct.
+
+First, I'll identify the main topics: functions vs. procedures, creating them in a block environment, naming conventions, parameters, and examples in different programming languages like JavaScript, PHP, and Lua. There are some parts with <UNK> which might be placeholders or typos. I should replace those with appropriate terms or clarify if they're part of the original text.
+
+The original text mentions using a block environment, which I assume refers to a visual programming tool like Scratch. The user talks about procedures and functions, their creation, naming, parameters, and examples. There are some grammatical errors and awkward phrasing, so I need to correct those while maintaining the technical accuracy.
+
+I'll start by restructuring the text into clear sections, maybe using headings for each part. I'll correct any spelling mistakes, like "bordas" to "bloco" or "parâmetros" to "parâmetros". Also, the mention of "sinal de andar rolar" might be a typo for "sinal de igual" or something similar. I'll need to infer the correct terms based on context.
+
+The user also includes examples in different languages, which I should present clearly. For instance, in JavaScript, the function definition uses "function", and in PHP, it's similar. I'll ensure that the syntax is correct and that the examples are properly formatted.
+
+Another point is the explanation of parameters and how they're passed. The original text has some confusion here, so I'll clarify that parameters are passed by value and that variables are declared within the function. I'll also make sure to explain the difference between procedures and functions, especially regarding return values.
+
+I need to check for any inconsistencies in the text, like the mention of "mundo" which might refer to the programming environment or a variable. I'll adjust that to fit the context. Also, the part about "variáveis de entrada" should be "parâmetros de entrada" to be accurate.
+
+Finally, I'll ensure that the entire text flows logically, starting with an introduction to functions and procedures, then moving into their creation, naming conventions, parameters, examples in different languages, and a conclusion. I'll remove any redundant information and make sure the language is clear and professional.
+...done thinking.
+
+Olá! Nesta aula, aprenderemos sobre funções e procedimentos. Funções e procedimentos são rotinas que contêm fragmentos de código que podem ser executados sem repetir a escrita do código. Essencialmente, elas atuam como agentes que podem ser chamados a partir do seu nome. Vamos explorar como criar funções e procedimentos no ambiente de blocos.  
+
+Acessamos a paleta de funções e encontramos duas opções: a primeira refere-se a **procedimentos**, e a segunda, a **funções**. Vamos criar inicialmente um **procedimento**. Observe o bloco para esse procedimento. Vamos escrever o nome do procedimento, chamando-o de `direCalor`. É comum utilizar nomes em letras minúsculas para procedimentos, pois o ambiente de blocos permite isso, embora, em linguagens de programação, isso não seja suportado.  
+
+No ambiente de blocos, nomes de variáveis e procedimentos podem conter letras minúsculas, sinais de pontuação, números (mas não podem começar com números) e caracteres como `_`. Por exemplo, nomes como `mundo`, `croácia` ou `sinal_de_igual` são válidos.  
+
+Agora, vamos criar um bloco de um procedimento que, ao ser chamado, exiba a mensagem "Olá, mundo!". Para isso, clicamos no bloco de texto e escrevemos a mensagem. Em seguida, utilizamos esse procedimento: ao criar um procedimento, ele aparece na paleta de funções e procedimentos, e basta chamá-lo ao clicar no bloco correspondente.  
+
+Vamos ver como isso se traduz em linguagens de programação:  
+- **JavaScript**:  
+  ```javascript  
+  function direCalor() {  
+    window.alert("Olá, mundo!");  
+  }  
+  ```  
+  Para chamar a função, utilizamos `direCalor();`.  
+
+- **PHP**:  
+  ```php  
+  function direCalor() {  
+    echo "Olá, mundo!";  
+  }  
+  ```  
+  Chamamos a função com `direCalor();`.  
+
+- **Lua**:  
+  ```lua  
+  function direCalor()  
+    print("Olá, mundo!")  
+  end  
+  ```  
+  Chamamos a função com `direCalor()`.  
+
+Agora, vamos explorar **parâmetros**. Um procedimento pode receber valores externos. Por exemplo, se criarmos um procedimento que exibe um nome, passamos o parâmetro `nome` como entrada.  
+- **JavaScript**:  
+  ```javascript  
+  function saudacao(nome) {  
+    alert("Olá, " + nome + "!");  
+  }  
+  ```  
+  Chamamos a função com `saudacao("João");`.  
+
+- **PHP**:  
+  ```php  
+  function saudacao($nome) {  
+    echo "Olá, $nome!";  
+  }  
+  ```  
+  Chamamos a função com `saudacao("João");`.  
+
+- **Lua**:  
+  ```lua  
+  function saudacao(nome)  
+    print("Olá, " .. nome .. "!")  
+  end  
+  ```  
+  Chamamos a função com `saudacao("João")`.  
+
+Para **funções**, que retornam valores, o processo é semelhante. Por exemplo, uma função que soma dois números:  
+- **JavaScript**:  
+  ```javascript  
+  function soma(x, y) {  
+    return x + y;  
+  }  
+  ```  
+  Chamamos a função com `soma(2, 3);`, resultando em `5`.  
+
+- **PHP**:  
+  ```php  
+  function soma($x, $y) {  
+    return $x + $y;  
+  }  
+  ```  
+  Chamamos a função com `soma(2, 3);`.  
+
+- **Lua**:  
+  ```lua  
+  function soma(x, y)  
+    return x + y  
+  end  
+  ```  
+  Chamamos a função com `soma(2, 3)`.  
+
+Resumindo:  
+- **Procedimentos** são blocos de código que executam ações, mas não retornam valores.  
+- **Funções** são semelhantes aos procedimentos, mas retornam valores.  
+- Parâmetros são valores passados para funções ou procedimentos, permitindo maior flexibilidade.  
+
+Com esses conceitos, você pode criar e utilizar funções e procedimentos de forma eficiente em qualquer linguagem de programação!

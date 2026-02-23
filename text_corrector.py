@@ -6,10 +6,7 @@ import sys
 def correct_text_with_ollama(text, model):
     """Correct text using Ollama"""
     prompt = (
-        "The following text came from an audio transcription. Can you correct it? "
-        "Return ONLY the corrected text, without any additional comments, explanations, "
-        "or formatting. Return only the clean corrected text.\n\n"
-        f"Text: {text}"
+        f"O texto a seguir foi obtido da transcrição de uma alua e precisa ser reescrito de modo que seja coerente e esteja corretamente formatado e correto, do ponto de vista da lingua e do tema. Retorne apenas o texto reescrito sem comentários adicionais.: {text}"
     )
 
     try:

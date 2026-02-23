@@ -1,0 +1,27 @@
+Nesta aula, resolveremos alguns problemas propostos.
+
+O primeiro problema consiste em criar um programa que solicite dois valores ao usuário. Esses valores serão armazenados em duas variáveis. Em seguida, deve ser determinado o menor deles e exibidos os dois valores na tela em ordem crescente.
+
+Pause a exibição deste vídeo e tente resolver o problema. Em seguida, retorne à exibição para conferir a resolução.
+
+Aqui está a resolução do primeiro problema: criamos duas variáveis, "a" e "b". Essas duas variáveis estão disponíveis na paleta de variáveis. Também criamos uma variável de saída para apresentação dos dados. As variáveis "a" e "b" recebem os valores digitados pelo usuário: o primeiro e o segundo valor, utilizando os blocos "perguntar", que foram configurados para número, porque vamos ter que fazer comparações numéricas.
+
+Em seguida, utilizamos um bloco "se", onde foi adicionada a cláusula "senão". No bloco "se", é feita a comparação: se "a" for maior que "b"? Não, queremos exibir em ordem crescente, então comparamos se "a" é menor que "b". Se "a" for menor que "b", então é exibida a informação da ordenação dos valores em ordem crescente, colocando "a" primeiro, seguido do valor de "b". Observe que, para isso, foi criada uma variável "saida", e essa variável "saida" vai ser configurada com os dados das duas variáveis utilizando um bloco "criar texto". Esse bloco foi utilizado porque precisamos concatenar a expressão: "Os valores em ordem crescente são: " seguido do valor da variável "a", depois " e " e o valor da variável "b", e um ponto final. No caso de "a" ser menor que "b", isso é feito.
+
+Caso contrário, a cláusula "senão" será executada. Nela, vamos definir a variável "saida" para o valor de "b" seguido do valor de "a", com o mesmo bloco "criar texto", onde invertemos apenas as variáveis.
+
+Por fim, colocamos um bloco "imprimir" para apresentar o resultado, utilizando a variável "saida". Vamos executar: entre o primeiro valor, vou digitar 3; o segundo valor, 4. A saída será: "Os valores em ordem crescente são: 3 e 4". Se invertermos, digitando 4 e 3, a saída será: "Os valores em ordem crescente são: 3 e 4" também, porque a lógica inverte corretamente. Se os valores forem iguais, ele também funcionará, exibindo o valor repetido.
+
+Para salvar o resultado, basta clicar no botão de download e o arquivo será baixado. Basta renomear com o nome que desejar.
+
+O segundo problema consiste em criar uma função que receba um número inteiro e, em seguida, calcule o seu fatorial. O valor do fatorial deve ser exibido na tela. É importante lembrar que o fatorial de um número é calculado da seguinte forma: o valor do fatorial de n é n vezes o fatorial de n-1. Isso ocorre sucessivamente, decompondo cada vez mais a expressão em n-1 fatorial, até chegar ao fatorial de 1, que é 1. Por exemplo, o fatorial de 5 é 5 vezes o fatorial de 4, que é 4 vezes o fatorial de 3, e assim por diante, até 1.
+
+Pause a exibição do vídeo, tente resolver o problema e, quando conseguir, volte à apresentação para ver a solução.
+
+Neste caso, utilizamos o bloco "função" na aba Funções. Arrastamos o bloco para a área de trabalho. Esse bloco tem a opção de ser renomeado. Nós o renomeamos para "fatorial". Foi adicionada a variável de entrada clicando na engrenagem e arrastando o bloco de entrada, que inicialmente vem como "x", e renomeamos para "n".
+
+Em seguida, foi adicionado, dentro do bloco da função, um bloco "se" para fazer a comparação. Se "n" for igual a 1, o resultado é definido como 1. Caso contrário, o resultado é definido para o valor de "n" vezes o fatorial de "n-1". Isso corresponde ao que vimos: o fatorial de um número é n vezes o fatorial de n-1. Para fazer esse cálculo, usamos a própria função "fatorial". Esse procedimento é chamado de recursão, quando chamamos a própria função várias vezes para processar parte dos dados. Também é chamado de recursividade.
+
+Uma vez que tenha sido completado todo o processo de cálculo do fatorial, vamos calcular o fatorial de 5. O valor será passado para a função. Na primeira chamada, "n" é 5. Como não é igual a 1, vai para a cláusula "senão" e calcula 5 vezes o fatorial de 4. Então, a função é chamada novamente com "n" igual a 4. Novamente, não é 1, então calcula 4 vezes o fatorial de 3. Esse processo se repete: 3 vezes o fatorial de 2, 2 vezes o fatorial de 1. Quando "n" chega a 1, a condição "n = 1" é verdadeira e retorna 1. Então, os resultados vão retornando: 2 * 1 = 2, 3 * 2 = 6, 4 * 6 = 24, 5 * 24 = 120.
+
+Para exibir o resultado, usamos um bloco "imprimir" com um texto: "O fatorial de 5 é: " e, em seguida, chamamos a função "fatorial" com o valor 5. Toda vez que criamos uma função, é criado um bloco correspondente que podemos usar. Ao executar, teremos: "O fatorial de 5 é: 120".

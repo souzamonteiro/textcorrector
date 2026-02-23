@@ -1,0 +1,43 @@
+Thinking...
+Okay, I need to help the user by rewriting the provided text. The original text is a transcription from a lesson, and it's quite messy with typos, unclear sentences, and some random words like <UNK>. My task is to make it coherent, properly formatted, and correct in terms of language and theme.
+
+First, I'll read through the text to understand the main topic. It seems to be about creating a class structure in object-oriented programming for dinosaurs, specifically Brontosaurus and T-Rex. The user mentions creating a base class called "Dinossauro" and derived classes for each dinosaur. There's also a part about constructors, attributes, and methods like "setNome" and "exibirNome".
+
+Now, I need to identify the key points and structure them logically. The original text has several parts: creating the base class, defining constructors, attributes, methods, and then creating derived classes. There are also mentions of methods like "comer" and some confusion about access modifiers and encapsulation.
+
+I should start by outlining the structure. First, the base class "Dinossauro" with a constructor that takes a name. Then, the derived classes "Brontossauro" and "Tiranoossauro" that inherit from "Dinossauro". Each derived class should have their own constructor that calls the base constructor. Also, there's a mention of encapsulation with getters and setters, and a method to display the name.
+
+The original text has some errors, like "dinossauros só logo aqui dinossauros não tenho introdução dicas do saúdo no salto salto include including adoro este livro lindos experiência éder um bom dia foto" – these seem to be typos or irrelevant parts. I'll need to ignore those and focus on the programming concepts.
+
+I should also correct any grammatical errors, like "vamos criar uma classe primitiva chamada de nossa conduta e nosso nossa nuno salpico volta mito obs" which doesn't make sense. Maybe it's a mix-up of words. The correct part is creating a base class "Dinossauro" with a constructor that takes a name.
+
+Another part mentions "sete seguido do nome do atributo sete ano recebe como parâmetro um valor" – this seems to be a mix of Portuguese and English. The correct term is "setNome" which is a method to set the name attribute.
+
+I need to make sure the rewritten text is clear, uses proper terminology, and follows the structure of a programming lesson. I'll organize the information step by step, ensuring that each part is explained correctly without the errors from the original text.
+
+Also, the user mentioned creating methods like "comer" which is a bit unclear. I'll include that as a method that each dinosaur can perform, even if it's a placeholder.
+
+Finally, I'll check for coherence, correct formatting, and proper grammar to ensure the rewritten text is accurate and easy to understand.
+...done thinking.
+
+O texto a seguir foi reescrito para ser coerente, formatado corretamente e apresentado com clareza, mantendo o conteúdo original relacionado à programação orientada a objetos com classes de dinossauros:
+
+---
+
+Vamos criar uma classe chamada `Dinossauro`, que será a classe primitiva para representar dinossauros. Cada tipo de dinossauro, como brontossauro e tiranossauro, será uma classe derivada dessa classe base.  
+
+Para começar, criaremos uma classe `Dinossauro` com um construtor que recebe o nome do dinossauro como parâmetro. O atributo `nome` será obrigatório e será atribuído ao objeto quando ele for criado.  
+
+Agora, vamos criar uma classe derivada chamada `Brontossauro`, que herda da classe `Dinossauro`. O construtor dessa classe também receberá o nome do brontossauro e o passará para o construtor da classe base. O mesmo processo será repetido para a classe `Tiranoossauro`.  
+
+Além disso, precisamos garantir que os atributos sejam encapsulados. Isso significa que os atributos não devem ser acessados diretamente, mas sim por métodos como `setNome` (para definir o nome) e `getNome` (para obter o nome). Esses métodos garantem que os valores sejam validados antes de serem atribuídos.  
+
+Também será criado um método `exibirNome()` que exibe o nome do dinossauro. Esse método será herdado pelas classes derivadas, mas pode ser sobrescrito se necessário.  
+
+Para testar, criaremos objetos de cada classe e exibiremos seus nomes. Além disso, será implementado um método `comer()` que simula a ação de comer, mesmo que seja um comportamento genérico para todos os dinossauros.  
+
+Esse exemplo ilustra a criação de uma hierarquia de classes, o uso de construtores, encapsulamento de atributos e polimorfismo em métodos. O objetivo é demonstrar como organizar código de forma modular e reutilizável, fundamentando-se nos princípios da programação orientada a objetos.  
+
+--- 
+
+Este texto foi estruturado para apresentar claramente os conceitos de programação orientada a objetos, mantendo a lógica e a coerência do conteúdo original.

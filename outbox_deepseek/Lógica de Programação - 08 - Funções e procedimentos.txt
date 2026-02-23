@@ -1,0 +1,88 @@
+Olá! Nesta aula, aprenderemos sobre funções e procedimentos. Funções e procedimentos são rotinas, ou seja, fragmentos de código que podem ser executados sem a necessidade de repetir a escrita do código. Essencialmente, eles podem ser chamados através de seu nome. É como se a gente fizesse uma chamada para a função a partir do seu nome.
+
+Vejamos como criar funções e procedimentos no ambiente de blocos. Acessamos a paleta de funções e temos duas opções: a primeira opção se refere a procedimentos e a segunda opção se refere a funções.
+
+Vamos criar inicialmente um procedimento. Arrastamos o bloco de procedimento. Nesse bloco, vamos escrever o nome do procedimento. Vamos chamar esse procedimento de "aloMundo". É comum utilizar nomes com letras minúsculas para procedimentos. Vamos criar um procedimento que exibe "Alô, mundo!" na tela. Observe que nós não utilizamos acentos em nomes de variáveis e procedimentos no ambiente de blocos. Até podemos fazer isso, mas mais tarde, nas linguagens de programação, não podemos, pois elas não suportam acentos. É necessário trabalhar somente com as letras do alfabeto, letras maiúsculas e minúsculas, o sinal de underscore (underline) e números, mas nunca começar com números, embora se possa começar com underscore.
+
+Vamos então criar um bloco de procedimento "aloMundo". O que esse procedimento faz quando ele é chamado? Ele vai exibir a mensagem "Alô, mundo!" na tela. Para tanto, clicamos em Texto, pegamos o bloco "imprimir" e escrevemos "Alô, mundo!". Criamos então um procedimento "aloMundo". Agora, vamos utilizar esse procedimento. Como fazemos isso? Uma vez que temos o procedimento criado, podemos vir aqui na paleta de procedimentos e funções e aparecerá um bloco correspondente ao novo bloco que acabamos de criar: "aloMundo". É só colocá-lo aqui e ele será executado. Basta testar.
+
+Como é que ficaria nas linguagens de programação? Em Dart, para criar um procedimento, utilizaremos a palavra-chave "void" (que indica que não retorna valor) seguida do nome do procedimento, abrimos parênteses e fechamos (se não tiver nenhum parâmetro). Em seguida, abrimos chaves, colocamos o conteúdo do procedimento e fechamos as chaves. Neste caso, o conteúdo do procedimento é apenas "print('Alô, mundo!');". Para executar o procedimento, chamamos "aloMundo();" (seguido de ponto e vírgula, porque em Dart todos os comandos terminam com ponto e vírgula).
+
+Em Python, usamos "def aloMundo():" e, na linha seguinte, com indentação, "print('Alô, mundo!')". Para chamar, escrevemos "aloMundo()".
+
+Em JavaScript, a palavra-chave é "function", depois o nome do procedimento, parênteses, abre chaves, o conteúdo (que nesse caso é "window.alert('Alô, mundo!');") e fecha chaves. Para executar, "aloMundo();".
+
+Em Lua, "function aloMundo()" e, entre "do" e "end", o conteúdo: "print('Alô, mundo!')". A chamada é "aloMundo()".
+
+Em MaiaScript, também "function aloMundo() { core.print('Alô, mundo!'); }" e a chamada "aloMundo();".
+
+Em PHP, "function aloMundo() { echo 'Alô, mundo!'; }" e a chamada "aloMundo();".
+
+Em Portugol, "funcao aloMundo() { escreva('Alô, mundo!'); }" e a chamada "aloMundo();".
+
+Vamos ver agora como é que passamos uma mensagem para o procedimento. Clicamos na engrenagem do bloco de procedimento e vamos adicionar um parâmetro. Vamos adicionar uma variável de entrada. Neste caso, a variável aparece como "x". Vou trocar o nome dela para "nome". O que vai acontecer agora? O procedimento passa a receber um parâmetro. Quando a variável "nome" aparecer, nós vamos mudar a mensagem. Em vez de "Alô, mundo!", vamos pegar o bloco "criar texto" e vamos colocar: "Alô, " e depois a variável "nome". Vamos também adicionar um bloco de texto com "!" no final. Pronto. Agora, para executar, vamos chamar o procedimento "aloMundo" passando para ele alguma coisa, por exemplo, "João". Vou passar o texto "João". Ao executar, aparece "Alô, João!". Se mudarmos para "Roberto", aparece "Alô, Roberto!".
+
+Como fica nas linguagens? Em Dart, simplesmente entre os parênteses na definição colocamos "String nome" para receber o parâmetro. Dentro do procedimento, utilizamos essa variável. Para enviar o nome para o procedimento, basta colocar, na chamada do procedimento, a expressão que queremos que seja passada. Em Portugol, é semelhante. Em JavaScript, muito parecido: "function aloMundo(nome) { window.alert('Alô, ' + nome + '!'); }". Na chamada, "aloMundo('João');". Em Lua, "function aloMundo(nome) print('Alô, ' .. nome .. '!') end" e chamada "aloMundo('João')". Em MaiaScript, idêntico ao JavaScript. Em PHP, também, lembrando que a variável de parâmetro também começa com cifrão: "function aloMundo($nome) { echo 'Alô, ' . $nome . '!'; }". Em Python, "def aloMundo(nome): print('Alô, ' + nome + '!')".
+
+Vejamos agora como criar uma função. Uma função é um procedimento especial que retorna um valor. Vamos criar uma função. Basta arrastar o bloco de funções que tem escrito "retorna". Vamos dar o nome de "soma". Esse bloco vai somar dois valores. Ele vai receber duas variáveis, "x" e "y" (números). As variáveis são automaticamente criadas. Então, vamos pegar o bloco matemático de adição e colocar dentro do bloco "retorna". Não preciso colocar mais nada: o retorno será o valor da soma dessas duas variáveis.
+
+Agora, quando criamos uma função que recebe dois valores e retorna a soma, vamos ver como fazer para exibir esse resultado. Lembrando que é uma função, vamos no bloco "imprimir" e criar um texto: "Soma: " e, em seguida, chamar a função "soma" (com letra minúscula, como é padrão). Vamos passar os valores 2 e 3. Executando, teremos "Soma: 5".
+
+Vejamos como ficou em cada uma das linguagens de programação.
+
+Em Dart: 
+```
+int soma(int x, int y) {
+  return x + y;
+}
+print('Soma: ${soma(2, 3)}');
+```
+
+Em Python:
+```
+def soma(x, y):
+    return x + y
+print('Soma:', soma(2, 3))
+```
+
+Em JavaScript:
+```
+function soma(x, y) {
+  return x + y;
+}
+console.log('Soma: ' + soma(2, 3));
+```
+
+Em Lua:
+```
+function soma(x, y)
+  return x + y
+end
+print('Soma: ' .. soma(2, 3))
+```
+
+Em MaiaScript:
+```
+function soma(x, y) {
+  return x + y;
+}
+core.print('Soma: ' + soma(2, 3));
+```
+
+Em PHP:
+```
+function soma($x, $y) {
+  return $x + $y;
+}
+echo 'Soma: ' . soma(2, 3);
+```
+
+Em Portugol:
+```
+funcao soma(x, y) {
+  retorne x + y
+}
+escreva('Soma: ', soma(2, 3))
+```
+
+A diferença fundamental entre procedimento e função é que a função retorna um valor, enquanto o procedimento apenas executa uma ação, sem retornar nada. Em muitas linguagens, procedimentos são chamados de "funções void" (sem retorno). As funções são extremamente úteis para organizar o código, evitar repetição e permitir a reutilização de lógica em diferentes partes do programa.

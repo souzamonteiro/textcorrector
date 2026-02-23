@@ -1,0 +1,9 @@
+Explore o vasto mundo da programação de computadores com centenas de livros excelentes disponíveis em livrarias e bibliotecas. Aqui estão alguns títulos relevantes que você pode encontrar:
+
+- “Algoritmos: Teoria e Prática” de Corrimento, que aborda o tema de forma didática.
+- “Lógica de Programação e Construção de Algoritmos e Estruturas de Dados” de Tipo Belone, que expande o tema, incluindo a utilização de estruturas de dados complexas frequentemente utilizadas em projetos científicos e comerciais.
+- “Entendendo Algoritmos com Cyrus”, que traduz o tema para programadores e outros curiosos de forma inovadora, apresentando-o de maneira lúdica a partir de ilustrações elaboradas.
+
+Não pare por aqui! Aprenda uma nova linguagem de programação. Neste curso, exploramos os elementos de sete linguagens de programação. Se você está descrente em PHP, Portugal e Java, aprenda mais sobre essas linguagens. Java, em particular, é uma das linguagens mais utilizadas em ambientes corporativos. Assista ao meu curso gratuito “Me Programando em Java” na Aldeia e se torne um expert.
+
+Para aprimorar suas habilidades de programação, assista aos meus cursos “Programado em Série” e “Programando Mais Marques”. Acima de tudo, programe! Programe todos os dias. Quanto mais você programar, melhor programador se tornará.

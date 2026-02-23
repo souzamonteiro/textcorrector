@@ -1,0 +1,122 @@
+Nesta aula, vamos resolver alguns problemas propostos para praticar os conceitos que aprendemos até agora.
+
+## Problema 1: Verificador de Palíndromo
+
+O primeiro problema consiste em construir um programa em C++ que verifique se uma palavra dada é um palíndromo. Um palíndromo é uma palavra que pode ser lida da mesma forma de frente para trás e de trás para frente. Exemplos: "arara", "osso", "radar".
+
+Tente resolver o problema por conta própria e depois volte para comparar com a minha solução.
+
+### Minha solução para o problema do palíndromo:
+
+Vamos criar um novo arquivo e desenvolver a solução passo a passo.
+
+```cpp
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char palavra[256];
+    int i, j;
+    bool ehPalindromo = true;
+    
+    cout << "Digite uma palavra: ";
+    cin >> palavra;
+    
+    int tamanho = strlen(palavra);
+    
+    // i percorre da esquerda para a direita
+    // j percorre da direita para a esquerda
+    for (i = 0, j = tamanho - 1; i < j; i++, j--) {
+        if (palavra[i] != palavra[j]) {
+            ehPalindromo = false;
+            break;  // Se encontrou diferença, interrompe o laço
+        }
+    }
+    
+    if (ehPalindromo) {
+        cout << "A palavra \"" << palavra << "\" é um palíndromo." << endl;
+    } else {
+        cout << "A palavra \"" << palavra << "\" não é um palíndromo." << endl;
+    }
+    
+    return 0;
+}
+```
+
+**Explicação da solução:**
+
+1. Criamos um vetor de caracteres `palavra` para armazenar a entrada do usuário.
+2. Declaramos duas variáveis de controle: `i` percorre a palavra da esquerda para a direita, e `j` percorre da direita para a esquerda.
+3. A variável `ehPalindromo` começa como `true` (verdadeiro), ou seja, assumimos que a palavra é um palíndromo até que encontremos uma evidência contrária.
+4. Usamos `strlen` para obter o tamanho da palavra. A última posição válida é `tamanho - 1`.
+5. No laço `for`, comparamos os caracteres das extremidades. Se encontrarmos dois caracteres diferentes, marcamos `ehPalindromo` como `false` e usamos `break` para interromper o laço imediatamente, pois não precisamos continuar verificando.
+6. O laço continua enquanto `i` for menor que `j`. Quando `i` e `j` se cruzam no meio da palavra, significa que todas as comparações foram feitas.
+7. Ao final, exibimos o resultado apropriado.
+
+## Problema 2: Contador de Vogais
+
+O segundo problema: escreva um programa em C++ que solicite ao usuário que digite seu primeiro nome e, em seguida, conte e exiba na tela o número de vogais presentes nesse nome.
+
+Tente resolver antes de prosseguir.
+
+### Minha solução para o contador de vogais:
+
+```cpp
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char nome[256];
+    int contadorVogais = 0;
+    
+    cout << "Digite seu primeiro nome: ";
+    cin >> nome;
+    
+    int tamanho = strlen(nome);
+    
+    for (int i = 0; i < tamanho; i++) {
+        // Verifica se o caractere atual é uma vogal (maiúscula ou minúscula)
+        if (nome[i] == 'a' || nome[i] == 'e' || nome[i] == 'i' || nome[i] == 'o' || nome[i] == 'u' ||
+            nome[i] == 'A' || nome[i] == 'E' || nome[i] == 'I' || nome[i] == 'O' || nome[i] == 'U') {
+            contadorVogais++;
+        }
+    }
+    
+    cout << "O nome \"" << nome << "\" contém " << contadorVogais << " vogais." << endl;
+    
+    return 0;
+}
+```
+
+**Explicação da solução:**
+
+1. Criamos um vetor `nome` para armazenar o nome digitado pelo usuário.
+2. Inicializamos `contadorVogais` com zero.
+3. Percorremos cada caractere do nome usando um laço `for`.
+4. Para cada caractere, verificamos se ele é igual a alguma vogal, considerando tanto maiúsculas quanto minúsculas.
+5. Se for uma vogal, incrementamos o contador.
+6. Ao final do laço, exibimos o resultado.
+
+**Observação importante sobre o Problema 4:**
+
+Na minha solução, usei uma série de comparações com `||` (ou lógico). É fundamental entender a precedência dos operadores. A comparação de igualdade (`==`) tem precedência maior que o operador lógico `||`. Portanto, a expressão `nome[i] == 'a' || nome[i] == 'e'` é interpretada corretamente como `(nome[i] == 'a') || (nome[i] == 'e')`, que é exatamente o que desejamos.
+
+Se houvesse risco de ambiguidade, poderíamos usar parênteses para tornar a expressão mais clara, mas neste caso eles não são necessários.
+
+## Conclusão
+
+Esses dois problemas exercitam conceitos fundamentais:
+- Manipulação de vetores de caracteres (strings no estilo C)
+- Laços de repetição para percorrer vetores
+- Condicionais para tomar decisões
+- Uso de operadores lógicos e relacionais
+- A função `strlen` da biblioteca `<cstring>`
+
+Pratique resolvendo essas questões e, se possível, tente criar variações, como:
+- Ignorar acentos na verificação de vogais
+- Verificar se uma frase inteira é um palíndromo (ignorando espaços e pontuação)
+- Contar consoantes também
+
+Na próxima aula, continuaremos com mais exercícios e novos conceitos. Até lá!

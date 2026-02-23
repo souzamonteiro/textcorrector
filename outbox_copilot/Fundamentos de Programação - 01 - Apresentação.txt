@@ -1,0 +1,21 @@
+Olá, sou Roberto Monteiro e este é o curso “Fundamentos de Programação”. Neste curso, exploraremos o mundo da programação e sua importância em nossa vida cotidiana. Os computadores estão em toda parte, desde nossos desktops, tablets e smartphones até assistentes pessoais como a Alexa da Amazon e o assistente pessoal Bixby. Esses dispositivos são controlados por programas de computador, e dominar a programação dá aos indivíduos uma vantagem significativa no mercado de trabalho, permitindo que eles controlem esses dispositivos onipresentes.
+
+Ao longo deste curso, mergulharemos nos fundamentos da lógica de programação na primeira parte, “Impulso”. Começaremos aprendendo a programar usando blocos de programação e, em seguida, construiremos algoritmos. Também exploraremos as estruturas básicas de sete linguagens de programação:
+
+1. Lua: Criada no Brasil, a Lua é uma linguagem de programação versátil usada em várias aplicações, incluindo desenvolvimento de jogos e sistemas embarcados.
+2. Python: Criada por Guido van Rossum, Python é uma linguagem de programação popular conhecida por sua simplicidade e legibilidade. É amplamente utilizada em desenvolvimento web, análise de dados, inteligência artificial e automação.
+3. JavaScript: Criada por Brendan Eich, JavaScript é uma linguagem de programação essencial para o desenvolvimento web. Ela permite que os desenvolvedores criem páginas da web interativas e dinâmicas.
+4. PHP: Criada por Rasmus Lerdorf, PHP é uma linguagem de script do lado do servidor usada principalmente para desenvolvimento web. É conhecida por sua simplicidade e integração com bancos de dados.
+5. Java: Criada por James Gosling, Java é uma linguagem de programação de propósito geral conhecida por sua portabilidade e escalabilidade. É amplamente utilizada no desenvolvimento de aplicativos Android, aplicações corporativas e sistemas embarcados.
+6. **C++:** Criada por Bjarne Stroustrup, C++ é uma linguagem de programação de propósito geral conhecida por seu desempenho e flexibilidade. É usada em vários domínios, incluindo desenvolvimento de jogos, aplicações científicas e sistemas embarcados.
+7. Impacto: Criada por mim, Impacto é uma linguagem de programação projetada especificamente para o desenvolvimento de aplicações científicas. É usada por alguns de nossos alunos de mestrado e doutorado.
+
+Ao aprender os fundamentos dessas linguagens, você ganhará uma base sólida que lhe permitirá explorar ainda mais qualquer uma delas, caso deseje continuar seus estudos de programação.
+
+Na segunda parte do curso, “Fundamentos de Programação”, nos aprofundaremos nos conceitos e princípios fundamentais da programação. Por fim, na última parte, “Programação Orientada a Objetos”, exploraremos os conceitos e princípios da programação orientada a objetos, um paradigma de programação amplamente utilizado na indústria de software.
+
+Nossos objetivos para este curso são equipá-lo com os conhecimentos e habilidades necessários para entender os princípios da programação e aplicá-los de forma eficaz em vários contextos.A lógica computacional compreende variáveis de operadores e estruturas de decisão e repetição comuns em programação de computadores. Utilizando funções, procedimentos e implementando algoritmos a partir de blocos de programação simples, os alunos aprenderão os fundamentos da linguagem de programação semanalmente. Além disso, compreenderão o paradigma de programação orientado a objetos e construirão programas de computador.
+
+Na primeira parte do curso, utilizaremos o ambiente de programação “É”, uma ferramenta que desenvolvi com meus amigos especificamente para ensinar programação de computadores. Já o utilizamos há vários anos em cenários como o Alegre, por exemplo, e em outras instituições de ensino pública. Na segunda e terceira partes, usaremos um dos ambientes de programação mais utilizados para a aprendizagem de programação em seis semanas.
+
+O objetivo é tornar o curso mais acessível. A avaliação consistirá em autoavaliações baseadas na resolução dos exercícios propostos. Além disso, haverá uma avaliação especial ao final do curso, que será utilizada para atribuir a nota na disciplina.
